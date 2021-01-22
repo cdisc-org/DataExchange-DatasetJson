@@ -1,0 +1,21 @@
+{
+  "name": "dataset-json",
+  "version": "0.0.1",
+  "description": "Dataset-JSON",
+  "main": "dataset.ts",
+  "dependencies": {
+    "ts-json-schema-generator": "^0.80.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "schema": "./node_modules/.bin/ts-json-schema-generator --path 'dataset.ts' --type 'DatasetJson' > ../schema/dataset.schema.json"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
+}

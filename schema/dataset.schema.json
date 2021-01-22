@@ -1,0 +1,100 @@
+{
+  "$ref": "#/definitions/DatasetJson",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Data": {
+      "additionalProperties": false,
+      "properties": {
+        "itemGroupData": {
+          "additionalProperties": {
+            "$ref": "#/definitions/ItemGroupData"
+          },
+          "type": "object"
+        },
+        "metaDataVersionOID": {
+          "type": "string"
+        },
+        "studyOID": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "studyOID",
+        "metaDataVersionOID",
+        "itemGroupData"
+      ],
+      "type": "object"
+    },
+    "DatasetJson": {
+      "additionalProperties": false,
+      "properties": {
+        "clinicalData": {
+          "$ref": "#/definitions/Data"
+        },
+        "referenceData": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "type": "object"
+    },
+    "ItemDescription": {
+      "additionalProperties": false,
+      "properties": {
+        "OID": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/ItemType"
+        }
+      },
+      "required": [
+        "OID",
+        "name"
+      ],
+      "type": "object"
+    },
+    "ItemGroupData": {
+      "additionalProperties": false,
+      "properties": {
+        "itemData": {
+          "items": {
+            "items": {
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/definitions/ItemDescription"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "items",
+        "itemData"
+      ],
+      "type": "object"
+    },
+    "ItemType": {
+      "enum": [
+        "string",
+        "integer",
+        "float",
+        "double"
+      ],
+      "type": "string"
+    }
+  }
+}
