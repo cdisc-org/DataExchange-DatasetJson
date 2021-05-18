@@ -79,9 +79,21 @@
             "$ref": "#/definitions/ItemDescription"
           },
           "type": "array"
+        },
+        "label": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "records": {
+          "type": "number"
         }
       },
       "required": [
+        "records",
+        "name",
+        "label",
         "items",
         "itemData"
       ],

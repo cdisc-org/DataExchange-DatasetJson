@@ -8,6 +8,9 @@ export interface ItemDescription {
 }
 
 export interface ItemGroupData {
+    records: number,
+    name: string,
+    label: string,
     items: Array<ItemDescription>;
     itemData: Array<Array<string|number>>;
 }
