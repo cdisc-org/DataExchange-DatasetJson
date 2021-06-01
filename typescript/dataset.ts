@@ -12,7 +12,7 @@ export interface ItemGroupData {
     name: string,
     label: string,
     items: Array<ItemDescription>;
-    itemData: Array<Array<string|number>>;
+    itemData: Array<Array<string|number|null>>;
 }
 
 export interface Data {

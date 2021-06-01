@@ -67,7 +67,8 @@
             "items": {
               "type": [
                 "string",
-                "number"
+                "number",
+                "null"
               ]
             },
             "type": "array"
