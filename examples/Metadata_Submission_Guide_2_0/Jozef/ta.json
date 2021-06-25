@@ -1,0 +1,12 @@
+{
+  "referenceData":{"studyOID":"cdisc.com/CDISCPILOT01","metaDataVersionOID":"MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7","itemGroupData": {"IG.TA":{"records":8,"name":"TA","label":"Trial Arms","items":[{"OID": "IT.TA.STUDYID", "name":"STUDYID", "label":"Study Identifier", "type":"string"},{"OID": "IT.TA.DOMAIN", "name":"DOMAIN", "label":"Domain Abbreviation", "type":"string"},{"OID": "IT.TA.ARMCD", "name":"ARMCD", "label":"Planned Arm Code", "type":"string"},{"OID": "IT.TA.ARM", "name":"ARM", "label":"Description of Planned Arm", "type":"string"},{"OID": "IT.TA.TAETORD", "name":"TAETORD", "label":"Planned Order of Element within Arm", "type":"integer"},{"OID": "IT.TA.ETCD", "name":"ETCD", "label":"Element Code", "type":"string"},{"OID": "IT.TA.ELEMENT", "name":"ELEMENT", "label":"Description of Element", "type":"string"},{"OID": "IT.TA.TABRANCH", "name":"TABRANCH", "label":"Branch", "type":"string"},{"OID": "IT.TA.TATRANS", "name":"TATRANS", "label":"Transition Rule", "type":"string"},{"OID": "IT.TA.EPOCH", "name":"EPOCH", "label":"Epoch", "type":"string"}],"itemData": [
+["CDISCPILOT01","TA","PLACEBO","Placebo",1,"SCREEN","Screening","Randomized to Placebo",null,"SCREENING"],
+["CDISCPILOT01","TA","PLACEBO","Placebo",2,"PLACEBO","Placebo",null,null,"TREATMENT"],
+["CDISCPILOT01","TA","ZAN_LOW","Zanomaline Low Dose (54 mg)",1,"SCREEN","Screening","Randomized to Zanomaline Low Dose",null,"SCREENING"],
+["CDISCPILOT01","TA","ZAN_LOW","Zanomaline Low Dose (54 mg)",2,"LOW","Zanomaline 54 mg",null,null,"TREATMENT"],
+["CDISCPILOT01","TA","ZAN_HIGH","Zanomaline High Dose (81 mg)",1,"SCREEN","Screening","Randomized to Zanomaline High Dose",null,"SCREENING"],
+["CDISCPILOT01","TA","ZAN_HIGH","Zanomaline High Dose (81 mg)",2,"TITRATE","Zanomaline 54 mg Titration",null,null,"TREATMENT"],
+["CDISCPILOT01","TA","ZAN_HIGH","Zanomaline High Dose (81 mg)",3,"HIGH","Zanomaline 81 mg",null,null,"TREATMENT"],
+["CDISCPILOT01","TA","ZAN_HIGH","Zanomaline High Dose (81 mg)",4,"TITRATE","Zanomaline 54 mg Titration",null,null,"TREATMENT"]
+]}}}
+}
