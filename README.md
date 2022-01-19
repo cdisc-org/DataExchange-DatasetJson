@@ -1,7 +1,7 @@
 # Dataset-JSON repository
 
 ```
-git clone https://github.com/cdisc-org/DataExchange-DatasetJson/dataset-json.git
+git clone https://github.com/cdisc-org/DataExchange-DatasetJson.git
 ```
 
 # Convert Typescript interfaces and types to JSON Schema
