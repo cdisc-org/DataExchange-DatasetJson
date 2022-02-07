@@ -11,32 +11,24 @@ export interface ItemDescription {
      * Unique Identifier for Item.
      *
      * @TJS-type string
-     * @minimum 1
-     * @maximum 1
      */
     OID: string;
     /**
      * Name for Item.
      *
      * @TJS-type string
-     * @minimum 1
-     * @maximum 1
      */
     name: string;
     /**
      * Label for Item
      * 
      * @TJS-type string
-     * @minimum 0
-     * @maximum 1
      */
     label?: string;
     /**
      * Item data type
      * 
      * @TJS-type ItemType
-     * @minimum 0
-     * @maximum 1
      */
     type?: ItemType;
 }
