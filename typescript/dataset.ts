@@ -10,33 +10,33 @@ export interface ItemDescription {
     /**
      * Unique Identifier for Item.
      *
-     * @OID.type string
-     * @OID.minimum 1
-     * @OID.maximum 1
+     * @TJS-type string
+     * @minimum 1
+     * @maximum 1
      */
     OID: string;
     /**
      * Name for Item.
      *
-     * @name.type string
-     * @name.minimum 1
-     * @name.maximum 1
+     * @TJS-type string
+     * @minimum 1
+     * @maximum 1
      */
     name: string;
     /**
      * Label for Item
      * 
-     * @label.type string
-     * @label.minimum 0
-     * @label.maximum 1
+     * @TJS-type string
+     * @minimum 0
+     * @maximum 1
      */
     label?: string;
     /**
      * Item data type
      * 
-     * @type.type ItemType
-     * @type.minimum 0
-     * @type.maximum 
+     * @TJS-type ItemType
+     * @minimum 0
+     * @maximum 1
      */
     type?: ItemType;
 }

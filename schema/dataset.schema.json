@@ -43,19 +43,27 @@
       "properties": {
         "OID": {
           "description": "Unique Identifier for Item.",
+          "maximum": 1,
+          "minimum": 1,
           "type": "string"
         },
         "label": {
           "description": "Label for Item",
+          "maximum": 1,
+          "minimum": 0,
           "type": "string"
         },
         "name": {
           "description": "Name for Item.",
+          "maximum": 1,
+          "minimum": 1,
           "type": "string"
         },
         "type": {
           "$ref": "#/definitions/ItemType",
-          "description": "Item data type"
+          "description": "Item data type",
+          "maximum": 1,
+          "minimum": 0
         }
       },
       "required": [
