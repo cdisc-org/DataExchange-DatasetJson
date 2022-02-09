@@ -8,13 +8,13 @@ export type ItemType = 'string' | 'integer' | 'float' | 'double';
  */
 export interface ItemDescription {
     /**
-     * Unique Identifier for Item.
+     * Unique Identifier for Item
      *
      * @TJS-type string
      */
     OID: string;
     /**
-     * Name for Item.
+     * Name for Item
      *
      * @TJS-type string
      */
