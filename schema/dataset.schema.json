@@ -39,18 +39,23 @@
     },
     "ItemDescription": {
       "additionalProperties": false,
+      "description": "Definition for Item in the Dataset",
       "properties": {
         "OID": {
+          "description": "Unique Identifier for Item.",
           "type": "string"
         },
         "label": {
+          "description": "Label for Item",
           "type": "string"
         },
         "name": {
+          "description": "Name for Item.",
           "type": "string"
         },
         "type": {
-          "$ref": "#/definitions/ItemType"
+          "$ref": "#/definitions/ItemType",
+          "description": "Item data type"
         }
       },
       "required": [
@@ -101,6 +106,7 @@
       "type": "object"
     },
     "ItemType": {
+      "description": "Enumerated set of Permissible Item Types",
       "enum": [
         "string",
         "integer",

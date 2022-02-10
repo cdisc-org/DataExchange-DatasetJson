@@ -1,9 +1,35 @@
+/**
+ * Enumerated set of Permissible Item Types
+ */
 export type ItemType = 'string' | 'integer' | 'float' | 'double';
 
+/**
+ * Definition for Item in the Dataset
+ */
 export interface ItemDescription {
+    /**
+     * Unique Identifier for Item
+     *
+     * @TJS-type string
+     */
     OID: string;
+    /**
+     * Name for Item
+     *
+     * @TJS-type string
+     */
     name: string;
+    /**
+     * Label for Item
+     * 
+     * @TJS-type string
+     */
     label?: string;
+    /**
+     * Item data type
+     * 
+     * @TJS-type ItemType
+     */
     type?: ItemType;
 }
 
