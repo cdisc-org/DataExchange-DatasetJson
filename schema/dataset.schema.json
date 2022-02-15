@@ -4,17 +4,21 @@
   "definitions": {
     "Data": {
       "additionalProperties": false,
+      "description": "Definition for Data contained in Dataset-JSON",
       "properties": {
         "itemGroupData": {
           "additionalProperties": {
             "$ref": "#/definitions/ItemGroupData"
           },
+          "description": "Object of Datasets. Key value is a unique identifier for Dataset, corresponding to ItemGroupDef/@OID in Define-XML",
           "type": "object"
         },
         "metaDataVersionOID": {
+          "description": "Metadata Version Identifier. See Define-XML specification for details.",
           "type": "string"
         },
         "studyOID": {
+          "description": "Unique identifier for Study. See ODM specification for details.",
           "type": "string"
         }
       },
@@ -27,35 +31,43 @@
     },
     "DatasetJson": {
       "additionalProperties": false,
+      "description": "Definition for Dataset-JSON",
       "properties": {
         "clinicalData": {
-          "$ref": "#/definitions/Data"
+          "$ref": "#/definitions/Data",
+          "description": "Object containing study subject data"
         },
         "referenceData": {
-          "$ref": "#/definitions/Data"
+          "$ref": "#/definitions/Data",
+          "description": "Object containing study non-subject data"
         }
       },
       "type": "object"
     },
     "ItemDescription": {
       "additionalProperties": false,
-      "description": "Definition for Item in the Dataset",
+      "description": "Definition for Variable in the Dataset",
       "properties": {
         "OID": {
-          "description": "Unique Identifier for Item.",
+          "description": "Unique identifier for Variable. Must correspond to ItemDef/@OID in Define-XML.",
           "type": "string"
         },
         "label": {
-          "description": "Label for Item",
+          "description": "Label for Variable",
           "type": "string"
         },
+        "length": {
+          "description": "Length for Variable",
+          "minimum": 1,
+          "type": "number"
+        },
         "name": {
-          "description": "Name for Item.",
+          "description": "Name for Variable",
           "type": "string"
         },
         "type": {
           "$ref": "#/definitions/ItemType",
-          "description": "Item data type"
+          "description": "Data type for Variable"
         }
       },
       "required": [
@@ -66,8 +78,10 @@
     },
     "ItemGroupData": {
       "additionalProperties": false,
+      "description": "Definition for Dataset",
       "properties": {
         "itemData": {
+          "description": "Contents for Dataset. Array of records, where each record is represented as an array of values.",
           "items": {
             "items": {
               "type": [
@@ -81,18 +95,23 @@
           "type": "array"
         },
         "items": {
+          "description": "Array with Variable Descriptions",
           "items": {
             "$ref": "#/definitions/ItemDescription"
           },
           "type": "array"
         },
         "label": {
+          "description": "Label for Dataset",
           "type": "string"
         },
         "name": {
+          "description": "Name for Dataset",
           "type": "string"
         },
         "records": {
+          "description": "Number of Records in Dataset",
+          "minimum": 0,
           "type": "number"
         }
       },
@@ -106,7 +125,7 @@
       "type": "object"
     },
     "ItemType": {
-      "description": "Enumerated set of Permissible Item Types",
+      "description": "Enumerated set of Permissible Variable Types",
       "enum": [
         "string",
         "integer",

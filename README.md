@@ -12,7 +12,7 @@ This project is used to manage the JSON representation for Clinical Datasets (a 
     cd typescript
     npm install
     ```
-3. Create a branch from `main` for your updates
+3. Create a branch from `master` for your updates
     ```
     git checkout -b feature/<new_facet>
     ```
