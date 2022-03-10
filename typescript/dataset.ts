@@ -24,20 +24,27 @@ export interface ItemDescription {
      *
      * @TJS-type string
      */
-    label?: string;
+    label?: string|null;
     /**
      * Data type for Variable
      *
      * @TJS-type ItemType
      */
-    type?: ItemType;
+    type: ItemType;
     /**
      * Length for Variable
      *
      * @minimum 1
      * @TJS-type integer
      */
-    length?: number;
+    length?: number|null;
+/**
+     * Number of digits to the right of the decimal point when the type of the variable is float
+     *
+     * @minimum 0
+     * @TJS-type integer
+     */
+    fractionDigits?: number|null;
 }
 
 /**

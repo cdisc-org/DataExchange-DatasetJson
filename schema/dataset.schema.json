@@ -52,14 +52,28 @@
           "description": "Unique identifier for Variable. Must correspond to ItemDef/@OID in Define-XML.",
           "type": "string"
         },
+        "fractionDigits": {
+          "description": "Number of digits to the right of the decimal point when the type of the variable is float",
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
         "label": {
           "description": "Label for Variable",
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "length": {
           "description": "Length for Variable",
           "minimum": 1,
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "name": {
           "description": "Name for Variable",
@@ -72,7 +86,8 @@
       },
       "required": [
         "OID",
-        "name"
+        "name",
+        "type"
       ],
       "type": "object"
     },
