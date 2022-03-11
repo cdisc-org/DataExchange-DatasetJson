@@ -10,127 +10,152 @@
                 "OID": "IT.LB.STUDYID",
                 "name": "STUDYID",
                 "label": "Study Identifier",
-                "type": "string"
+                "type": "string",
+                "length": 12
             },
             {
                 "OID": "IT.LB.DOMAIN",
                 "name": "DOMAIN",
                 "label": "Domain Abbreviation",
-                "type": "string"
+                "type": "string",
+                "length": 2
             },
             {
                 "OID": "IT.LB.USUBJID",
                 "name": "USUBJID",
                 "label": "Unique Subject Identifier",
-                "type": "string"
+                "type": "string",
+                "length": 8
             },
             {
                 "OID": "IT.LB.LBSEQ",
                 "name": "LBSEQ",
                 "label": "Sequence Number",
-                "type": "integer"
+                "type": "integer",
+                "length": 3
             },
             {
                 "OID": "IT.LB.LBTESTCD",
                 "name": "LBTESTCD",
                 "label": "Lab Test or Examination Short Name",
-                "type": "string"
+                "type": "string",
+                "length": 7
             },
             {
                 "OID": "IT.LB.LBTEST",
                 "name": "LBTEST",
                 "label": "Lab Test or Examination Name",
-                "type": "string"
+                "type": "string",
+                "length": 39
             },
             {
                 "OID": "IT.LB.LBCAT",
                 "name": "LBCAT",
                 "label": "Category for Lab Test",
-                "type": "string"
+                "type": "string",
+                "length": 10
             },
             {
                 "OID": "IT.LB.LBORRES",
                 "name": "LBORRES",
                 "label": "Result or Finding in Original Units",
-                "type": "string"
+                "type": "string",
+                "length": 6
             },
             {
                 "OID": "IT.LB.LBORRESU",
                 "name": "LBORRESU",
                 "label": "Original Units",
-                "type": "string"
+                "type": "string",
+                "length": 7
             },
             {
                 "OID": "IT.LB.LBORNRLO",
                 "name": "LBORNRLO",
                 "label": "Reference Range Lower Limit in Orig Unit",
-                "type": "string"
+                "type": "string",
+                "length": 200
             },
             {
                 "OID": "IT.LB.LBORNRHI",
                 "name": "LBORNRHI",
                 "label": "Reference Range Upper Limit in Orig Unit",
-                "type": "string"
+                "type": "string",
+                "length": 200
             },
             {
                 "OID": "IT.LB.LBSTRESC",
                 "name": "LBSTRESC",
                 "label": "Character Result/Finding in Std Format",
-                "type": "string"
+                "type": "string",
+                "length": 8
             },
             {
                 "OID": "IT.LB.LBSTRESN",
                 "name": "LBSTRESN",
                 "label": "Numeric Result/Finding in Standard Units",
-                "type": "float"
+                "type": "float",
+                "length": 8,
+                "fractionDigits": 5
             },
             {
                 "OID": "IT.LB.LBSTRESU",
                 "name": "LBSTRESU",
                 "label": "Standard Units",
-                "type": "string"
+                "type": "string",
+                "length": 7
             },
             {
                 "OID": "IT.LB.LBSTNRLO",
                 "name": "LBSTNRLO",
                 "label": "Reference Range Lower Limit-Std Units",
-                "type": "float"
+                "type": "float",
+                "length": 5,
+                "fractionDigits": 3
             },
             {
                 "OID": "IT.LB.LBSTNRHI",
                 "name": "LBSTNRHI",
                 "label": "Reference Range Upper Limit-Std Units",
-                "type": "float"
+                "type": "float",
+                "length": 5,
+                "fractionDigits": 2
             },
             {
                 "OID": "IT.LB.LBNRIND",
                 "name": "LBNRIND",
                 "label": "Reference Range Indicator",
-                "type": "string"
+                "type": "string",
+                "length": 8
             },
             {
                 "OID": "IT.LB.LBLOBXFL",
                 "name": "LBLOBXFL",
                 "label": "Last Observation Before Exposure Flag",
-                "type": "string"
+                "type": "string",
+                "length": 1
             },
             {
                 "OID": "IT.LB.VISITNUM",
                 "name": "VISITNUM",
                 "label": "Visit Number",
-                "type": "float"
+                "type": "float",
+                "length": 8,
+                "fractionDigits": 2
             },
             {
                 "OID": "IT.LB.VISIT",
                 "name": "VISIT",
                 "label": "Visit Name",
-                "type": "string"
+                "type": "string",
+                "length": 200
             },
             {
                 "OID": "IT.LB.EPOCH",
                 "name": "EPOCH",
                 "label": "Epoch",
-                "type": "string"
+                "type": "string",
+                "length": 9
             },
             {
                 "OID": "IT.LB.LBDTC",
@@ -142,7 +167,8 @@
                 "OID": "IT.LB.LBDY",
                 "name": "LBDY",
                 "label": "Study Day of Specimen Collection",
-                "type": "integer"
+                "type": "integer",
+                "length": 8
             }
         ],
         "itemData": [
