@@ -1,11 +1,17 @@
 /**
  * Enumerated set of Permissible Variable Types
  */
-export type ItemType = 'string' | 'integer' | 'float' | 'double';
+export type ItemType = 'string' | 'integer' | 'float' | 'double' | 'decimal' | 'boolean';
 
+/**
+* The first item in the data array needs to be a number ()
+ */
+export type FirstItemType = number;
+export type ItemDataArray = [FirstItemType, ...Array<string|number|null>];
 /**
  * Definition for Variable in the Dataset
  */
+
 export interface ItemDescription {
     /**
      * Unique identifier for Variable. Must correspond to ItemDef/@OID in Define-XML.
@@ -24,7 +30,7 @@ export interface ItemDescription {
      *
      * @TJS-type string
      */
-    label?: string|null;
+    label: string|null;
     /**
      * Data type for Variable
      *
@@ -81,7 +87,7 @@ export interface ItemGroupData {
      *
      * @TJS-type array
      */
-    itemData: Array<Array<string|number|null>>;
+    itemData: Array<ItemDataArray>;
 }
 
 /**
