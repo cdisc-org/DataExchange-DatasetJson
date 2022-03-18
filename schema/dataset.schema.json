@@ -45,7 +45,7 @@
       "type": "object"
     },
     "FirstItemType": {
-      "description": "The first item in the data array needs to be a number ()",
+      "description": "The first item in the data array needs to be a number (itemGroupDataSeq)",
       "type": "number"
     },
     "ItemDataArray": {

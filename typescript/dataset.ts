@@ -4,14 +4,14 @@
 export type ItemType = 'string' | 'integer' | 'float' | 'double' | 'decimal' | 'boolean';
 
 /**
-* The first item in the data array needs to be a number ()
+* The first item in the data array needs to be a number (itemGroupDataSeq)
  */
 export type FirstItemType = number;
 export type ItemDataArray = [FirstItemType, ...Array<string|number|null>];
+
 /**
  * Definition for Variable in the Dataset
  */
-
 export interface ItemDescription {
     /**
      * Unique identifier for Variable. Must correspond to ItemDef/@OID in Define-XML.
@@ -44,7 +44,7 @@ export interface ItemDescription {
      * @TJS-type integer
      */
     length?: number|null;
-/**
+    /**
      * Number of digits to the right of the decimal point when the type of the variable is float
      *
      * @minimum 0
