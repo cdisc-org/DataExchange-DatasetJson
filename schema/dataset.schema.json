@@ -82,10 +82,7 @@
         },
         "label": {
           "description": "Label for Variable",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "length": {
           "description": "Length for Variable",

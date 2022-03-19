@@ -30,7 +30,7 @@ export interface ItemDescription {
      *
      * @TJS-type string
      */
-    label: string|null;
+    label: string;
     /**
      * Data type for Variable
      *
