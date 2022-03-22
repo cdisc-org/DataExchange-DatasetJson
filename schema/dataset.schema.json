@@ -44,6 +44,26 @@
       },
       "type": "object"
     },
+    "FirstItemType": {
+      "description": "The first item in the data array needs to be a number (itemGroupDataSeq)",
+      "type": "number"
+    },
+    "ItemDataArray": {
+      "additionalItems": {
+        "type": [
+          "string",
+          "number",
+          "null"
+        ]
+      },
+      "items": [
+        {
+          "$ref": "#/definitions/FirstItemType"
+        }
+      ],
+      "minItems": 1,
+      "type": "array"
+    },
     "ItemDescription": {
       "additionalProperties": false,
       "description": "Definition for Variable in the Dataset",
@@ -52,6 +72,14 @@
           "description": "Unique identifier for Variable. Must correspond to ItemDef/@OID in Define-XML.",
           "type": "string"
         },
+        "fractionDigits": {
+          "description": "Number of digits to the right of the decimal point when the type of the variable is float",
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
         "label": {
           "description": "Label for Variable",
           "type": "string"
@@ -59,7 +87,10 @@
         "length": {
           "description": "Length for Variable",
           "minimum": 1,
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "name": {
           "description": "Name for Variable",
@@ -72,7 +103,9 @@
       },
       "required": [
         "OID",
-        "name"
+        "name",
+        "label",
+        "type"
       ],
       "type": "object"
     },
@@ -83,14 +116,7 @@
         "itemData": {
           "description": "Contents for Dataset. Array of records, where each record is represented as an array of values.",
           "items": {
-            "items": {
-              "type": [
-                "string",
-                "number",
-                "null"
-              ]
-            },
-            "type": "array"
+            "$ref": "#/definitions/ItemDataArray"
           },
           "type": "array"
         },
@@ -130,7 +156,9 @@
         "string",
         "integer",
         "float",
-        "double"
+        "double",
+        "decimal",
+        "boolean"
       ],
       "type": "string"
     }

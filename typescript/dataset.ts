@@ -1,7 +1,13 @@
 /**
  * Enumerated set of Permissible Variable Types
  */
-export type ItemType = 'string' | 'integer' | 'float' | 'double';
+export type ItemType = 'string' | 'integer' | 'float' | 'double' | 'decimal' | 'boolean';
+
+/**
+* The first item in the data array needs to be a number (itemGroupDataSeq)
+ */
+export type FirstItemType = number;
+export type ItemDataArray = [FirstItemType, ...Array<string|number|null>];
 
 /**
  * Definition for Variable in the Dataset
@@ -24,20 +30,27 @@ export interface ItemDescription {
      *
      * @TJS-type string
      */
-    label?: string;
+    label: string;
     /**
      * Data type for Variable
      *
      * @TJS-type ItemType
      */
-    type?: ItemType;
+    type: ItemType;
     /**
      * Length for Variable
      *
      * @minimum 1
      * @TJS-type integer
      */
-    length?: number;
+    length?: number|null;
+    /**
+     * Number of digits to the right of the decimal point when the type of the variable is float
+     *
+     * @minimum 0
+     * @TJS-type integer
+     */
+    fractionDigits?: number|null;
 }
 
 /**
@@ -74,7 +87,7 @@ export interface ItemGroupData {
      *
      * @TJS-type array
      */
-    itemData: Array<Array<string|number|null>>;
+    itemData: Array<ItemDataArray>;
 }
 
 /**
