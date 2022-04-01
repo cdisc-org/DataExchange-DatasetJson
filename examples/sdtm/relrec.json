@@ -1,0 +1,10 @@
+{
+  "clinicalData":{"studyOID":"cdisc.com/CDISCPILOT01","metaDataVersionOID":"MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7","itemGroupData": {"IG.RELREC":{"records":6,"name":"RELREC","label":"Related Records","items":[{"OID": "ITEMGROUPDATASEQ", "name": "ITEMGROUPDATASEQ", "label": "Record Identifier", "type": "integer"},{"OID": "IT.RELREC.STUDYID", "name":"STUDYID", "label":"Study Identifier", "type":"string", "length":12},{"OID": "IT.RELREC.RDOMAIN", "name":"RDOMAIN", "label":"Related Domain Abbreviation", "type":"string", "length":6},{"OID": "IT.RELREC.USUBJID", "name":"USUBJID", "label":"Unique Subject Identifier", "type":"string", "length":8},{"OID": "IT.RELREC.IDVAR", "name":"IDVAR", "label":"Identifying Variable", "type":"string", "length":200},{"OID": "IT.RELREC.IDVARVAL", "name":"IDVARVAL", "label":"Identifying Variable Value", "type":"string", "length":200},{"OID": "IT.RELREC.RELTYPE", "name":"RELTYPE", "label":"Relationship Type", "type":"string", "length":4},{"OID": "IT.RELREC.RELID", "name":"RELID", "label":"Relationship Identifier", "type":"string", "length":200}],"itemData": [
+[1,"CDISCPILOT01","AE","","AELNKID","","ONE","AEDS"],
+[2,"CDISCPILOT01","DS","","DSLNKID","","ONE","AEDS"],
+[3,"CDISCPILOT01","AE","","AELNKID","","ONE","AEDD"],
+[4,"CDISCPILOT01","DD","","DDLNKID","","ONE","AEDD"],
+[5,"CDISCPILOT01","AE","","AELNKID","","ONE","AEFA"],
+[6,"CDISCPILOT01","FA","","FALNKGRP","","MANY","AEFA"]
+]}}}
+}
