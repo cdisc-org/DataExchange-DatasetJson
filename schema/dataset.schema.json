@@ -73,7 +73,7 @@
           "type": "string"
         },
         "fractionDigits": {
-          "description": "Number of digits to the right of the decimal point when the type of the variable is float",
+          "description": "Number of digits to the right of the decimal point when the type of the variable is decimal",
           "minimum": 0,
           "type": [
             "number",
