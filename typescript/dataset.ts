@@ -44,13 +44,6 @@ export interface ItemDescription {
      * @TJS-type integer
      */
     length?: number|null;
-    /**
-     * Number of digits to the right of the decimal point when the type of the variable is decimal
-     *
-     * @minimum 0
-     * @TJS-type integer
-     */
-    fractionDigits?: number|null;
 }
 
 /**
