@@ -1,4 +1,4 @@
-{
+﻿{
   "$ref": "#/definitions/DatasetJson",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
@@ -71,14 +71,6 @@
         "OID": {
           "description": "Unique identifier for Variable. Must correspond to ItemDef/@OID in Define-XML.",
           "type": "string"
-        },
-        "fractionDigits": {
-          "description": "Number of digits to the right of the decimal point when the type of the variable is decimal",
-          "minimum": 0,
-          "type": [
-            "number",
-            "null"
-          ]
         },
         "label": {
           "description": "Label for Variable",
