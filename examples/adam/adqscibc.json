@@ -145,8 +145,7 @@
             "name": "AVISITN",
             "label": "Analysis Visit (N)",
             "type": "integer",
-            "length": 8,
-            "fractionDigits": 1
+            "length": 8
           },
           {
             "OID": "ADQSCIBC.VISIT",
@@ -160,8 +159,7 @@
             "name": "VISITNUM",
             "label": "Visit Number",
             "type": "float",
-            "length": 8,
-            "fractionDigits": 1
+            "length": 8
           },
           {
             "OID": "ADQSCIBC.ADY",

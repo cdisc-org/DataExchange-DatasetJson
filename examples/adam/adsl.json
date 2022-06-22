@@ -110,16 +110,14 @@
             "name": "AVGDD",
             "label": "Avg Daily Dose (as planned)",
             "type": "float",
-            "length": 8,
-            "fractionDigits": 1
+            "length": 8
           },
           {
             "OID": "ADSL.CUMDOSE",
             "name": "CUMDOSE",
             "label": "Cumulative Dose (as planned)",
             "type": "float",
-            "length": 8,
-            "fractionDigits": 1
+            "length": 8
           },
           {
             "OID": "ADSL.AGE",
@@ -245,8 +243,7 @@
             "name": "BMIBL",
             "label": "Baseline BMI (kg/m^2)",
             "type": "float",
-            "length": 8,
-            "fractionDigits": 1
+            "length": 8
           },
           {
             "OID": "ADSL.BMIBLGR1",
@@ -260,16 +257,14 @@
             "name": "HEIGHTBL",
             "label": "Baseline Height (cm)",
             "type": "float",
-            "length": 8,
-            "fractionDigits": 1
+            "length": 8
           },
           {
             "OID": "ADSL.WEIGHTBL",
             "name": "WEIGHTBL",
             "label": "Baseline Weight (kg)",
             "type": "float",
-            "length": 8,
-            "fractionDigits": 1
+            "length": 8
           },
           {
             "OID": "ADSL.EDUCLVL",
@@ -290,8 +285,7 @@
             "name": "DURDIS",
             "label": "Duration of Disease (Months)",
             "type": "float",
-            "length": 8,
-            "fractionDigits": 1
+            "length": 8
           },
           {
             "OID": "ADSL.DURDSGR1",
