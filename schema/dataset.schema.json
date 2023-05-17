@@ -1,4 +1,4 @@
-﻿{
+{
   "$ref": "#/definitions/DatasetJson",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
@@ -10,21 +10,26 @@
           "additionalProperties": {
             "$ref": "#/definitions/ItemGroupData"
           },
-          "description": "Object of Datasets. Key value is a unique identifier for Dataset, corresponding to ItemGroupDef/@OID in Define-XML",
+          "description": "Object of Datasets. Key value is a unique identifier for Dataset, corresponding to ItemGroupDef/@OID in Define-XML.",
           "type": "object"
         },
+        "metaDataRef": {
+          "description": "URL for a metadata file the describing the data.",
+          "type": "string"
+        },
         "metaDataVersionOID": {
-          "description": "Metadata Version Identifier. See Define-XML specification for details.",
+          "description": "Metadata Version Identifier. See ODM definition for metadata version OID (ODM/Study/MetaDataVersion/@OID).",
           "type": "string"
         },
         "studyOID": {
-          "description": "Unique identifier for Study. See ODM specification for details.",
+          "description": "Unique identifier for Study. See ODM definition for study OID (ODM/Study/@OID).",
           "type": "string"
         }
       },
       "required": [
         "studyOID",
         "metaDataVersionOID",
+        "metaDataRef",
         "itemGroupData"
       ],
       "type": "object"
@@ -33,15 +38,50 @@
       "additionalProperties": false,
       "description": "Definition for Dataset-JSON",
       "properties": {
+        "asOfDateTime": {
+          "description": "The date/time at which the source database was queried in order to create this document.",
+          "type": "string"
+        },
         "clinicalData": {
           "$ref": "#/definitions/Data",
-          "description": "Object containing study subject data"
+          "description": "Object containing study subject data."
+        },
+        "creationDateTime": {
+          "description": "Time of creation of the file containing the document.",
+          "type": "string"
+        },
+        "datasetJSONVersion": {
+          "description": "Version of Dataset-JSON standard.",
+          "type": "string"
+        },
+        "fileOID": {
+          "description": "A unique identifier for this file.",
+          "type": "string"
+        },
+        "originator": {
+          "description": "The organization that generated the Dataset-JSON file.",
+          "type": "string"
         },
         "referenceData": {
           "$ref": "#/definitions/Data",
-          "description": "Object containing study non-subject data"
+          "description": "Object containing study non-subject data."
+        },
+        "sourceSystem": {
+          "description": "The computer system or database management system that is the source of the information in this file.",
+          "type": "string"
+        },
+        "sourceSystemVersion": {
+          "description": "The version of the \"SourceSystem\" above.",
+          "type": "string"
         }
       },
+      "required": [
+        "fileOID",
+        "creationDateTime",
+        "asOfDateTime",
+        "datasetJSONVersion",
+        "originator"
+      ],
       "type": "object"
     },
     "FirstItemType": {
@@ -71,6 +111,10 @@
         "OID": {
           "description": "Unique identifier for Variable. Must correspond to ItemDef/@OID in Define-XML.",
           "type": "string"
+        },
+        "keySequence": {
+          "description": "Indicates that this item is a key variable in the dataset structure. It also provides an ordering for the keys.",
+          "type": "number"
         },
         "label": {
           "description": "Label for Variable",
