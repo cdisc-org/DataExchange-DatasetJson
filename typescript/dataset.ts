@@ -116,7 +116,7 @@ export interface Data {
    *
    * @TJS-type string
    */
-  metaDataRef: string;
+  metaDataRef?: string;
   /**
    * Object of Datasets. Key value is a unique identifier for Dataset, corresponding to ItemGroupDef/@OID in Define-XML.
    *
@@ -148,7 +148,7 @@ export interface DatasetJson {
    *
    * @TJS-type string
    */
-  asOfDateTime: string;
+  asOfDateTime?: string;
   /**
    * Version of Dataset-JSON standard.
    *
@@ -160,7 +160,7 @@ export interface DatasetJson {
    *
    * @TJS-type string
    */
-  originator: string;
+  originator?: string;
   /**
    * The computer system or database management system that is the source of the information in this file.
    *
