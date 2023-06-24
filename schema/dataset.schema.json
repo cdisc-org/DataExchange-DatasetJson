@@ -109,6 +109,10 @@
           "description": "Unique identifier for Variable. Must correspond to ItemDef/@OID in Define-XML.",
           "type": "string"
         },
+        "displayFormat": {
+          "description": "Display format supports data visualization of numeric float and date values.",
+          "type": "string"
+        },
         "keySequence": {
           "description": "Indicates that this item is a key variable in the dataset structure. It also provides an ordering for the keys.",
           "type": "number"

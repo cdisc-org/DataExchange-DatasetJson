@@ -56,6 +56,12 @@ export interface ItemDescription {
    * @TJS-type integer
    */
   keySequence?: number;
+  /**
+   * Display format supports data visualization of numeric float and date values.
+   *
+   * @TJS-type string
+   */
+  displayFormat?: string;
 }
 
 /**
