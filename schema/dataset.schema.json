@@ -11,6 +11,8 @@
             "$ref": "#/definitions/ItemGroupData"
           },
           "description": "Object of Datasets. Key value is a unique identifier for Dataset, corresponding to ItemGroupDef/@OID in Define-XML.",
+          "maxProperties": 1,
+          "minProperties": 1,
           "type": "object"
         },
         "metaDataRef": {
@@ -27,8 +29,6 @@
         }
       },
       "required": [
-        "studyOID",
-        "metaDataVersionOID",
         "itemGroupData"
       ],
       "type": "object"
@@ -75,9 +75,8 @@
         }
       },
       "required": [
-        "fileOID",
-        "creationDateTime",
-        "datasetJSONVersion"
+        "datasetJSONVersion",
+        "creationDateTime"
       ],
       "type": "object"
     },

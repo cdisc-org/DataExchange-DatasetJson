@@ -51,17 +51,17 @@ export interface ItemDescription {
    */
   length?: number | null;
   /**
-   * Indicates that this item is a key variable in the dataset structure. It also provides an ordering for the keys.
-   *
-   * @TJS-type integer
-   */
-  keySequence?: number;
-  /**
    * Display format supports data visualization of numeric float and date values.
    *
    * @TJS-type string
    */
   displayFormat?: string;
+  /**
+   * Indicates that this item is a key variable in the dataset structure. It also provides an ordering for the keys.
+   *
+   * @TJS-type integer
+   */
+  keySequence?: number;
 }
 
 /**
@@ -110,13 +110,13 @@ export interface Data {
    *
    * @TJS-type string
    */
-  studyOID: string;
+  studyOID?: string;
   /**
    * Metadata Version Identifier. See ODM definition for metadata version OID (ODM/Study/MetaDataVersion/@OID).
    *
    * @TJS-type string
    */
-  metaDataVersionOID: string;
+  metaDataVersionOID?: string;
   /**
    * URL for a metadata file the describing the data.
    *
@@ -126,6 +126,8 @@ export interface Data {
   /**
    * Object of Datasets. Key value is a unique identifier for Dataset, corresponding to ItemGroupDef/@OID in Define-XML.
    *
+   * @maxProperties 1
+   * @minProperties 1
    * @TJS-type object
    */
   itemGroupData: {
@@ -138,11 +140,11 @@ export interface Data {
  */
 export interface DatasetJson {
   /**
-   * A unique identifier for this file.
+   * Version of Dataset-JSON standard.
    *
    * @TJS-type string
    */
-  fileOID: string;
+  datasetJSONVersion: string;
   /**
    * Time of creation of the file containing the document.
    *
@@ -150,17 +152,17 @@ export interface DatasetJson {
    */
   creationDateTime: string;
   /**
+   * A unique identifier for this file.
+   *
+   * @TJS-type string
+   */
+  fileOID?: string;
+  /**
    * The date/time at which the source database was queried in order to create this document.
    *
    * @TJS-type string
    */
   asOfDateTime?: string;
-  /**
-   * Version of Dataset-JSON standard.
-   *
-   * @TJS-type string
-   */
-  datasetJSONVersion: string;
   /**
    * The organization that generated the Dataset-JSON file.
    *
