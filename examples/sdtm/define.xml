@@ -20,11 +20,11 @@
   ODMVersion="1.3.2"
   FileOID="www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0"
   FileType="Snapshot"
-  CreationDateTime="2021-01-24T17:47:32" AsOfDateTime="2021-01-24T16:59:33"
+  CreationDateTime="2021-01-24T16:59:33"
   Originator="CDISC MSG Team"
   SourceSystem="M.Hungria-System"
   SourceSystemVersion="2.1-A1"
-  def:Context="Other"
+  def:Context="Submission"
   >
 
 
@@ -1879,8 +1879,8 @@
         <ItemRef ItemOID="IT.TA.TATRANS" Mandatory="No" OrderNumber="9" Role="Rule"/>
         <ItemRef ItemOID="IT.TA.EPOCH" Mandatory="Yes" OrderNumber="10" MethodOID="MT.EPOCH" Role="Timing"/>
         <def:Class Name="TRIAL DESIGN"/>
-        <def:leaf ID="LF.TA" xlink:href="ta.json">
-          <def:title>ta.json</def:title>
+        <def:leaf ID="LF.TA" xlink:href="ta.xpt">
+          <def:title>ta.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (TE) -->
@@ -1899,8 +1899,8 @@
         <ItemRef ItemOID="IT.TE.TESTRL" Mandatory="Yes" OrderNumber="5" Role="Rule"/>
         <ItemRef ItemOID="IT.TE.TEENRL" Mandatory="No" OrderNumber="6" Role="Rule"/>
         <def:Class Name="TRIAL DESIGN"/>
-        <def:leaf ID="LF.TE" xlink:href="te.json">
-          <def:title>te.json</def:title>
+        <def:leaf ID="LF.TE" xlink:href="te.xpt">
+          <def:title>te.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (TI) -->
@@ -1919,8 +1919,8 @@
         <ItemRef ItemOID="IT.TI.IECAT" Mandatory="Yes" OrderNumber="5" Role="Grouping Qualifier"/>
         <ItemRef ItemOID="IT.TI.TIVERS" Mandatory="No" OrderNumber="6" KeySequence="3" Role="Record Qualifier"/>
         <def:Class Name="TRIAL DESIGN"/>
-        <def:leaf ID="LF.TI" xlink:href="ti.json">
-          <def:title>ti.json</def:title>
+        <def:leaf ID="LF.TI" xlink:href="ti.xpt">
+          <def:title>ti.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (TS) -->
@@ -1944,8 +1944,8 @@
         <ItemRef ItemOID="IT.TS.TSVCDREF" Mandatory="No" OrderNumber="10" Role="Result Qualifier"/>
         <ItemRef ItemOID="IT.TS.TSVCDVER" Mandatory="No" OrderNumber="11" Role="Result Qualifier"/>
         <def:Class Name="TRIAL DESIGN"/>
-        <def:leaf ID="LF.TS" xlink:href="ts.json">
-          <def:title>ts.json</def:title>
+        <def:leaf ID="LF.TS" xlink:href="ts.xpt">
+          <def:title>ts.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (TV) -->
@@ -1965,8 +1965,8 @@
         <ItemRef ItemOID="IT.TV.TVSTRL" Mandatory="Yes" OrderNumber="6" Role="Rule"/>
         <ItemRef ItemOID="IT.TV.TVENRL" Mandatory="No" OrderNumber="7" Role="Rule"/>
         <def:Class Name="TRIAL DESIGN"/>
-        <def:leaf ID="LF.TV" xlink:href="tv.json">
-          <def:title>tv.json</def:title>
+        <def:leaf ID="LF.TV" xlink:href="tv.xpt">
+          <def:title>tv.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (DM) -->
@@ -2005,8 +2005,8 @@
         <ItemRef ItemOID="IT.DM.ACTARMUD" Mandatory="No" OrderNumber="25" Role="Record Qualifier"/>
         <ItemRef ItemOID="IT.DM.COUNTRY" Mandatory="Yes" OrderNumber="26" Role="Record Qualifier"/>
         <def:Class Name="SPECIAL PURPOSE"/>
-        <def:leaf ID="LF.DM" xlink:href="dm.json">
-          <def:title>dm.json</def:title>
+        <def:leaf ID="LF.DM" xlink:href="dm.xpt">
+          <def:title>dm.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (SE) -->
@@ -2030,8 +2030,8 @@
         <ItemRef ItemOID="IT.SE.SESTDY" Mandatory="No" OrderNumber="10" MethodOID="MT.DAYCALC" Role="Timing"/>
         <ItemRef ItemOID="IT.SE.SEENDY" Mandatory="No" OrderNumber="11" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="SPECIAL PURPOSE"/>
-        <def:leaf ID="LF.SE" xlink:href="se.json">
-          <def:title>se.json</def:title>
+        <def:leaf ID="LF.SE" xlink:href="se.xpt">
+          <def:title>se.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (SV) -->
@@ -2054,8 +2054,8 @@
         <ItemRef ItemOID="IT.SV.SVENDY" Mandatory="No" OrderNumber="9" MethodOID="MT.DAYCALC" Role="Timing"/>
         <ItemRef ItemOID="IT.SV.SVUPDES" Mandatory="No" OrderNumber="10" Role="Synonym Qualifier"/>
         <def:Class Name="SPECIAL PURPOSE"/>
-        <def:leaf ID="LF.SV" xlink:href="sv.json">
-          <def:title>sv.json</def:title>
+        <def:leaf ID="LF.SV" xlink:href="sv.xpt">
+          <def:title>sv.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (CM) -->
@@ -2085,8 +2085,8 @@
         <ItemRef ItemOID="IT.CM.CMENRTPT" Mandatory="No" OrderNumber="16" Role="Timing"/>
         <ItemRef ItemOID="IT.CM.CMENTPT" Mandatory="No" OrderNumber="17" MethodOID="MT.CMENTPT" Role="Timing"/>
         <def:Class Name="INTERVENTIONS"/>
-        <def:leaf ID="LF.CM" xlink:href="cm.json">
-          <def:title>cm.json</def:title>
+        <def:leaf ID="LF.CM" xlink:href="cm.xpt">
+          <def:title>cm.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (EC) -->
@@ -2120,8 +2120,8 @@
         <ItemRef ItemOID="IT.EC.ECSTDY" Mandatory="No" OrderNumber="20" MethodOID="MT.DAYCALC" Role="Timing"/>
         <ItemRef ItemOID="IT.EC.ECENDY" Mandatory="No" OrderNumber="21" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="INTERVENTIONS"/>
-        <def:leaf ID="LF.EC" xlink:href="ec.json">
-          <def:title>ec.json</def:title>
+        <def:leaf ID="LF.EC" xlink:href="ec.xpt">
+          <def:title>ec.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (EX) -->
@@ -2151,8 +2151,8 @@
         <ItemRef ItemOID="IT.EX.EXSTDY" Mandatory="No" OrderNumber="16" Role="Timing"/>
         <ItemRef ItemOID="IT.EX.EXENDY" Mandatory="No" OrderNumber="17" Role="Timing"/>
         <def:Class Name="INTERVENTIONS"/>
-        <def:leaf ID="LF.EX" xlink:href="ex.json">
-          <def:title>ex.json</def:title>
+        <def:leaf ID="LF.EX" xlink:href="ex.xpt">
+          <def:title>ex.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (AE) -->
@@ -2202,8 +2202,8 @@
         <ItemRef ItemOID="IT.AE.AEENRTPT" Mandatory="No" OrderNumber="36" Role="Timing"/>
         <ItemRef ItemOID="IT.AE.AEENTPT" Mandatory="No" OrderNumber="37" MethodOID="MT.AEENTPT" Role="Timing"/>
         <def:Class Name="EVENTS"/>
-        <def:leaf ID="LF.AE" xlink:href="ae.json">
-          <def:title>ae.json</def:title>
+        <def:leaf ID="LF.AE" xlink:href="ae.xpt">
+          <def:title>ae.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (DS) -->
@@ -2228,8 +2228,8 @@
         <ItemRef ItemOID="IT.DS.DSSTDTC" Mandatory="No" OrderNumber="11" KeySequence="3" Role="Timing"/>
         <ItemRef ItemOID="IT.DS.DSSTDY" Mandatory="No" OrderNumber="12" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="EVENTS"/>
-        <def:leaf ID="LF.DS" xlink:href="ds.json">
-          <def:title>ds.json</def:title>
+        <def:leaf ID="LF.DS" xlink:href="ds.xpt">
+          <def:title>ds.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (MH) -->
@@ -2250,8 +2250,8 @@
         <ItemRef ItemOID="IT.MH.MHSTDTC" Mandatory="No" OrderNumber="7" KeySequence="4" Role="Timing"/>
         <ItemRef ItemOID="IT.MH.MHSTDY" Mandatory="No" OrderNumber="8" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="EVENTS"/>
-        <def:leaf ID="LF.MH" xlink:href="mh.json">
-          <def:title>mh.json</def:title>
+        <def:leaf ID="LF.MH" xlink:href="mh.xpt">
+          <def:title>mh.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (DD) -->
@@ -2276,8 +2276,8 @@
         <ItemRef ItemOID="IT.DD.DDDTC" Mandatory="No" OrderNumber="11" Role="Timing"/>
         <ItemRef ItemOID="IT.DD.DDDY" Mandatory="No" OrderNumber="12" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.DD" xlink:href="dd.json">
-          <def:title>dd.json</def:title>
+        <def:leaf ID="LF.DD" xlink:href="dd.xpt">
+          <def:title>dd.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (FT) -->
@@ -2312,8 +2312,8 @@
         <ItemRef ItemOID="IT.FT.FTELTM" Mandatory="No" OrderNumber="21" Role="Timing"/>
         <ItemRef ItemOID="IT.FT.FTTPTREF" Mandatory="No" OrderNumber="22" Role="Timing"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.FT" xlink:href="ft.json">
-          <def:title>ft.json</def:title>
+        <def:leaf ID="LF.FT" xlink:href="ft.xpt">
+          <def:title>ft.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (IE) -->
@@ -2338,8 +2338,8 @@
         <ItemRef ItemOID="IT.IE.IEDTC" Mandatory="No" OrderNumber="11" Role="Timing"/>
         <ItemRef ItemOID="IT.IE.IEDY" Mandatory="No" OrderNumber="12" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.IE" xlink:href="ie.json">
-          <def:title>ie.json</def:title>
+        <def:leaf ID="LF.IE" xlink:href="ie.xpt">
+          <def:title>ie.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (LB) -->
@@ -2375,8 +2375,8 @@
         <ItemRef ItemOID="IT.LB.LBDTC" Mandatory="No" OrderNumber="22" KeySequence="5" Role="Timing"/>
         <ItemRef ItemOID="IT.LB.LBDY" Mandatory="No" OrderNumber="23" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.LB" xlink:href="lb.json">
-          <def:title>lb.json</def:title>
+        <def:leaf ID="LF.LB" xlink:href="lb.xpt">
+          <def:title>lb.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (NV) -->
@@ -2430,8 +2430,8 @@
         <ItemRef ItemOID="IT.OE.OEDTC" Mandatory="No" OrderNumber="17" Role="Timing"/>
         <ItemRef ItemOID="IT.OE.OEDY" Mandatory="No" OrderNumber="18" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.OE" xlink:href="oe.json">
-          <def:title>oe.json</def:title>
+        <def:leaf ID="LF.OE" xlink:href="oe.xpt">
+          <def:title>oe.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (QSPH) -->
@@ -2462,8 +2462,8 @@
         <ItemRef ItemOID="IT.QSPH.QSEVLINT" Mandatory="No" OrderNumber="17" Role="Timing"/>
         <Alias Context="DomainDescription" Name="Questionnaires"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.QSPH" xlink:href="qsph.json">
-          <def:title>qsph.json</def:title>
+        <def:leaf ID="LF.QSPH" xlink:href="qsph.xpt">
+          <def:title>qsph.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (QSSL) -->
@@ -2493,8 +2493,8 @@
         <ItemRef ItemOID="IT.QSSL.QSDY" Mandatory="No" OrderNumber="16" MethodOID="MT.DAYCALC" Role="Timing"/>
         <Alias Context="DomainDescription" Name="Questionnaires"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.QSSL" xlink:href="qssl.json">
-          <def:title>qssl.json</def:title>
+        <def:leaf ID="LF.QSSL" xlink:href="qssl.xpt">
+          <def:title>qssl.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (RS) -->
@@ -2524,8 +2524,8 @@
         <ItemRef ItemOID="IT.RS.RSDY" Mandatory="No" OrderNumber="16" MethodOID="MT.DAYCALC" Role="Timing"/>
         <ItemRef ItemOID="IT.RS.RSEVLINT" Mandatory="No" OrderNumber="17" Role="Timing"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.RS" xlink:href="rs.json">
-          <def:title>rs.json</def:title>
+        <def:leaf ID="LF.RS" xlink:href="rs.xpt">
+          <def:title>rs.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (VS) -->
@@ -2559,8 +2559,8 @@
         <ItemRef ItemOID="IT.VS.VSDTC" Mandatory="No" OrderNumber="20" Role="Timing"/>
         <ItemRef ItemOID="IT.VS.VSDY" Mandatory="No" OrderNumber="21" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="FINDINGS"/>
-        <def:leaf ID="LF.VS" xlink:href="vs.json">
-          <def:title>vs.json</def:title>
+        <def:leaf ID="LF.VS" xlink:href="vs.xpt">
+          <def:title>vs.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (FA) -->
@@ -2589,8 +2589,8 @@
         <ItemRef ItemOID="IT.FA.FADTC" Mandatory="No" OrderNumber="15" KeySequence="6" Role="Timing"/>
         <ItemRef ItemOID="IT.FA.FADY" Mandatory="No" OrderNumber="16" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="FINDINGS ABOUT"/>
-        <def:leaf ID="LF.FA" xlink:href="fa.json">
-          <def:title>fa.json</def:title>
+        <def:leaf ID="LF.FA" xlink:href="fa.xpt">
+          <def:title>fa.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (RELREC) -->
@@ -2610,8 +2610,8 @@
         <ItemRef ItemOID="IT.RELREC.RELTYPE" Mandatory="No" OrderNumber="6" Role="Record Qualifier"/>
         <ItemRef ItemOID="IT.RELREC.RELID" Mandatory="Yes" OrderNumber="7" KeySequence="6" Role="Record Qualifier"/>
         <def:Class Name="RELATIONSHIP"/>
-        <def:leaf ID="LF.RELREC" xlink:href="relrec.json">
-          <def:title>relrec.json</def:title>
+        <def:leaf ID="LF.RELREC" xlink:href="relrec.xpt">
+          <def:title>relrec.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (SUPPDM) -->
@@ -2635,8 +2635,8 @@
         <ItemRef ItemOID="IT.SUPPDM.QEVAL" Mandatory="No" OrderNumber="10" Role="Record Qualifier"/>
         <Alias Context="DomainDescription" Name="Demographics"/>
         <def:Class Name="RELATIONSHIP"/>
-        <def:leaf ID="LF.SUPPDM" xlink:href="suppdm.json">
-          <def:title>suppdm.json</def:title>
+        <def:leaf ID="LF.SUPPDM" xlink:href="suppdm.xpt">
+          <def:title>suppdm.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (SUPPEC) -->
@@ -2660,8 +2660,8 @@
         <ItemRef ItemOID="IT.SUPPEC.QEVAL" Mandatory="No" OrderNumber="10" Role="Record Qualifier"/>
         <Alias Context="DomainDescription" Name="Exposure as Collected"/>
         <def:Class Name="RELATIONSHIP"/>
-        <def:leaf ID="LF.SUPPEC" xlink:href="suppec.json">
-          <def:title>suppec.json</def:title>
+        <def:leaf ID="LF.SUPPEC" xlink:href="suppec.xpt">
+          <def:title>suppec.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (SUPPNV) -->
@@ -2725,8 +2725,8 @@
         <ItemRef ItemOID="IT.DI.DIPARM" Mandatory="Yes" OrderNumber="6" Role="Synonym Qualifier"/>
         <ItemRef ItemOID="IT.DI.DIVAL" Mandatory="Yes" OrderNumber="7" Role="Result Qualifier"/>
         <def:Class Name="STUDY REFERENCE"/>
-        <def:leaf ID="LF.DI" xlink:href="di.json">
-          <def:title>di.json</def:title>
+        <def:leaf ID="LF.DI" xlink:href="di.xpt">
+          <def:title>di.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
 

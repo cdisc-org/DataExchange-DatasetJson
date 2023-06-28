@@ -1,7 +1,9 @@
 # Examples
 
-The examples in the sdtm folder were created from XPT files that were published as part of the [SDTM Metadata Submission Guidelines v2.0](https://www.cdisc.org/standards/foundational/sdtm/sdtm-metadata-submission-guidelines-v2-0).
-The examples in the adam folder were created from XPT files that were part of the [CDISC SDTM / ADaM Pilot Project](https://github.com/cdisc-org/sdtm-adam-pilot-project).
+The examples conform to the Dataset-JSON specification ([https://www.cdisc.org/dataset-json](https://www.cdisc.org/dataset-json)).
+
+The examples in the sdtm folder were created from XPT files that were published as part of the [Study Data Tabulation Model Metadata Submission Guidelines (SDTM-MSG): Human Clinical Trials Version 2.0 (Final, 30 March 2021)](https://www.cdisc.org/standards/foundational/sdtm/sdtm-metadata-submission-guidelines-v2-0).
+The examples in the adam folder were created from XPT files that were published as part of the [Analysis Data Model Metadata Submission Guidelines (ADaM MSG): Human Clinical Trials Version 1.0 (Final, 18 April 2023)](https://www.cdisc.org/standards/foundational/adam/adam-metadata-submission-guidelines-v1-0).
 
 The i18n folder contains a JSON file with the AETERM variable in Japanese.
 
