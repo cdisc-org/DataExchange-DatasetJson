@@ -100,19 +100,12 @@
 
 %mend expand;
 
-
-
-%let _dataset_=lb;
-libname xptout "&root/examples/sdtm";
-
+/* The original lb.xpt file is 2.63 Mb. TThe factor 1936 expands it to 5Gb */
 %expand(
-  xptin=&root/examples/sdtm/&_dataset_..xpt, 
-  xptout=&Root/examples/big_xpt/&_dataset_..xpt, 
-  dataset=&_dataset_,  
+  xptin=&root/examples/sdtm/lb.xpt, 
+  xptout=&Root/examples/big_xpt/lb.xpt, 
+  dataset=lb,  
   libout=work,
   idvar=USUBJID,
   factor=1939
   );
-
-libname xptout clear;
-  
