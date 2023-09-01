@@ -26,3 +26,8 @@ This project is used to manage the JSON representation for Clinical Datasets (a 
     git push -u origin feature/<new_facet>
     ```
 7. Raise a Pull Request for the update
+
+
+## Example Data
+
+The **examples/big_xpt** folder contains scripts to create a large XPT file (5Gb) from the XPT file **examples/sdtm/lb.xpt**.
