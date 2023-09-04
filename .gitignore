@@ -1,3 +1,5 @@
 typescript/node_modules
 *.log
 examples/big_xpt/*.xpt
+.Rproj.user
+.Rhistory
