@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "schema": "./node_modules/.bin/ts-json-schema-generator --path 'dataset.ts' --type 'DatasetJson' > ../schema/dataset.schema.json"
+    "schema": "npx ts-json-schema-generator --path dataset.ts --type DatasetJson > ../schema/dataset.schema.json && echo JSON Schema generated successfully! || echo JSON Schema generation Failed."
   },
   "author": "",
   "license": "Apache-2.0",
