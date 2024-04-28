@@ -1,1 +1,160 @@
-{"creationDateTime":"2023-06-28T15:38:44","datasetJSONVersion":"1.0.0","fileOID":"www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/relrec","asOfDateTime":"2023-05-31T00:00:00","originator":"CDISC SDTM MSG Team","sourceSystem":"Sponsor System","sourceSystemVersion":"1.0","clinicalData":{"studyOID":"cdisc.com/CDISCPILOT01","metaDataVersionOID":"MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7","metaDataRef":"https://metadata.location.org/CDISCPILOT01/define.xml","itemGroupData":{"IG.RELREC":{"records":6,"name":"RELREC","label":"Related Records","items":[{"OID":"ITEMGROUPDATASEQ","name":"ITEMGROUPDATASEQ","label":"Record Identifier","type":"integer"},{"OID":"IT.RELREC.STUDYID","name":"STUDYID","label":"Study Identifier","type":"string","length":12,"keySequence":1},{"OID":"IT.RELREC.RDOMAIN","name":"RDOMAIN","label":"Related Domain Abbreviation","type":"string","length":6,"keySequence":2},{"OID":"IT.RELREC.USUBJID","name":"USUBJID","label":"Unique Subject Identifier","type":"string","length":8,"keySequence":3},{"OID":"IT.RELREC.IDVAR","name":"IDVAR","label":"Identifying Variable","type":"string","length":200,"keySequence":4},{"OID":"IT.RELREC.IDVARVAL","name":"IDVARVAL","label":"Identifying Variable Value","type":"string","length":200,"keySequence":5},{"OID":"IT.RELREC.RELTYPE","name":"RELTYPE","label":"Relationship Type","type":"string","length":4},{"OID":"IT.RELREC.RELID","name":"RELID","label":"Relationship Identifier","type":"string","length":200,"keySequence":6}],"itemData":[[1,"CDISCPILOT01","AE","","AELNKID","","ONE","AEDS"],[2,"CDISCPILOT01","DS","","DSLNKID","","ONE","AEDS"],[3,"CDISCPILOT01","AE","","AELNKID","","ONE","AEDD"],[4,"CDISCPILOT01","DD","","DDLNKID","","ONE","AEDD"],[5,"CDISCPILOT01","AE","","AELNKID","","ONE","AEFA"],[6,"CDISCPILOT01","FA","","FALNKGRP","","MANY","AEFA"]]}}}}
+{
+    "asOfDateTime": "2023-05-31T00:00:00",
+    "columns": [
+        {
+            "dataType": "integer",
+            "displayFormat": "",
+            "itemOID": "ITEMGROUPDATASEQ",
+            "keySequence": 0,
+            "label": "Record Identifier",
+            "length": 0,
+            "name": "ITEMGROUPDATASEQ",
+            "targetDataType": "integer"
+        },
+        {
+            "dataType": "string",
+            "displayFormat": "",
+            "itemOID": "IT.RELREC.STUDYID",
+            "keySequence": 1,
+            "label": "Study Identifier",
+            "length": 12,
+            "name": "STUDYID",
+            "targetDataType": "string"
+        },
+        {
+            "dataType": "string",
+            "displayFormat": "",
+            "itemOID": "IT.RELREC.RDOMAIN",
+            "keySequence": 2,
+            "label": "Related Domain Abbreviation",
+            "length": 6,
+            "name": "RDOMAIN",
+            "targetDataType": "string"
+        },
+        {
+            "dataType": "string",
+            "displayFormat": "",
+            "itemOID": "IT.RELREC.USUBJID",
+            "keySequence": 3,
+            "label": "Unique Subject Identifier",
+            "length": 8,
+            "name": "USUBJID",
+            "targetDataType": "string"
+        },
+        {
+            "dataType": "string",
+            "displayFormat": "",
+            "itemOID": "IT.RELREC.IDVAR",
+            "keySequence": 4,
+            "label": "Identifying Variable",
+            "length": 200,
+            "name": "IDVAR",
+            "targetDataType": "string"
+        },
+        {
+            "dataType": "string",
+            "displayFormat": "",
+            "itemOID": "IT.RELREC.IDVARVAL",
+            "keySequence": 5,
+            "label": "Identifying Variable Value",
+            "length": 200,
+            "name": "IDVARVAL",
+            "targetDataType": "string"
+        },
+        {
+            "dataType": "string",
+            "displayFormat": "",
+            "itemOID": "IT.RELREC.RELTYPE",
+            "keySequence": 0,
+            "label": "Relationship Type",
+            "length": 4,
+            "name": "RELTYPE",
+            "targetDataType": "string"
+        },
+        {
+            "dataType": "string",
+            "displayFormat": "",
+            "itemOID": "IT.RELREC.RELID",
+            "keySequence": 6,
+            "label": "Relationship Identifier",
+            "length": 200,
+            "name": "RELID",
+            "targetDataType": "string"
+        }
+    ],
+    "creationDateTime": "2023-06-28T15:38:44",
+    "datasetJSONVersion": "1.0.0",
+    "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/relrec",
+    "label": "Related Records",
+    "metaDataRef": "",
+    "metaDataVersionOID": "",
+    "name": "RELREC",
+    "originator": "CDISC SDTM MSG Team",
+    "records": 6,
+    "sourceSystem": "Sponsor System",
+    "sourceSystemVersion": "1.0",
+    "studyOID": "",
+    "itemGroupOID": "IG.RELREC",
+    "rows": [
+        [
+            1,
+            "CDISCPILOT01",
+            "AE",
+            "",
+            "AELNKID",
+            "",
+            "ONE",
+            "AEDS"
+        ],
+        [
+            2,
+            "CDISCPILOT01",
+            "DS",
+            "",
+            "DSLNKID",
+            "",
+            "ONE",
+            "AEDS"
+        ],
+        [
+            3,
+            "CDISCPILOT01",
+            "AE",
+            "",
+            "AELNKID",
+            "",
+            "ONE",
+            "AEDD"
+        ],
+        [
+            4,
+            "CDISCPILOT01",
+            "DD",
+            "",
+            "DDLNKID",
+            "",
+            "ONE",
+            "AEDD"
+        ],
+        [
+            5,
+            "CDISCPILOT01",
+            "AE",
+            "",
+            "AELNKID",
+            "",
+            "ONE",
+            "AEFA"
+        ],
+        [
+            6,
+            "CDISCPILOT01",
+            "FA",
+            "",
+            "FALNKGRP",
+            "",
+            "MANY",
+            "AEFA"
+        ]
+    ]
+}
