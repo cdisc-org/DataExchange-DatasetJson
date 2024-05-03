@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.USUBJID",
             "keySequence": 2,
             "label": "Unique Subject Identifier",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.SUBJID",
             "keySequence": 0,
             "label": "Subject Identifier for the Study",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.RFSTDTC",
             "keySequence": 0,
             "label": "Subject Reference Start Date/Time",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.RFENDTC",
             "keySequence": 0,
             "label": "Subject Reference End Date/Time",
@@ -73,7 +73,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.RFXSTDTC",
             "keySequence": 0,
             "label": "Date/Time of First Study Treatment",
@@ -83,7 +83,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.RFXENDTC",
             "keySequence": 0,
             "label": "Date/Time of Last Study Treatment",
@@ -93,7 +93,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.RFICDTC",
             "keySequence": 0,
             "label": "Date/Time of Informed Consent",
@@ -103,7 +103,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.RFPENDTC",
             "keySequence": 0,
             "label": "Date/Time of End of Participation",
@@ -113,7 +113,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.DTHDTC",
             "keySequence": 0,
             "label": "Date/Time of Death",
@@ -123,7 +123,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.DTHFL",
             "keySequence": 0,
             "label": "Subject Death Flag",
@@ -133,7 +133,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.SITEID",
             "keySequence": 0,
             "label": "Study Site Identifier",
@@ -143,7 +143,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.BRTHDTC",
             "keySequence": 0,
             "label": "Date/Time of Birth",
@@ -153,7 +153,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.AGE",
             "keySequence": 0,
             "label": "Age",
@@ -163,7 +163,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.AGEU",
             "keySequence": 0,
             "label": "Age Units",
@@ -173,7 +173,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.SEX",
             "keySequence": 0,
             "label": "Sex",
@@ -183,7 +183,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.RACE",
             "keySequence": 0,
             "label": "Race",
@@ -193,7 +193,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.ETHNIC",
             "keySequence": 0,
             "label": "Ethnicity",
@@ -203,7 +203,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.ARMCD",
             "keySequence": 0,
             "label": "Planned Arm Code",
@@ -213,7 +213,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.ARM",
             "keySequence": 0,
             "label": "Description of Planned Arm",
@@ -223,7 +223,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.ACTARMCD",
             "keySequence": 0,
             "label": "Actual Arm Code",
@@ -233,7 +233,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.ACTARM",
             "keySequence": 0,
             "label": "Description of Actual Arm",
@@ -243,7 +243,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.ARMNRS",
             "keySequence": 0,
             "label": "Reason Arm and/or Actual Arm is Null",
@@ -253,7 +253,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.ACTARMUD",
             "keySequence": 0,
             "label": "Description of Unplanned Actual Arm",
@@ -263,7 +263,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DM.COUNTRY",
             "keySequence": 0,
             "label": "Country",
@@ -276,14 +276,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/dm",
     "label": "Demographics",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "DM",
     "originator": "CDISC SDTM MSG Team",
     "records": 18,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.DM",
     "rows": [
         [

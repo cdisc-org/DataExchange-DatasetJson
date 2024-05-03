@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.USUBJID",
             "keySequence": 2,
             "label": "Unique Subject Identifier",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSSEQ",
             "keySequence": 0,
             "label": "Sequence Number",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSTESTCD",
             "keySequence": 3,
             "label": "Vital Signs Test Short Name",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSTEST",
             "keySequence": 0,
             "label": "Vital Signs Test Name",
@@ -73,7 +73,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSPOS",
             "keySequence": 4,
             "label": "Vital Signs Position of Subject",
@@ -83,7 +83,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSORRES",
             "keySequence": 0,
             "label": "Result or Finding in Original Units",
@@ -93,7 +93,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSORRESU",
             "keySequence": 0,
             "label": "Original Units",
@@ -103,7 +103,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSSTRESC",
             "keySequence": 0,
             "label": "Character Result/Finding in Std Format",
@@ -113,7 +113,7 @@
         },
         {
             "dataType": "decimal",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSSTRESN",
             "keySequence": 0,
             "label": "Numeric Result/Finding in Standard Units",
@@ -123,7 +123,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSSTRESU",
             "keySequence": 0,
             "label": "Standard Units",
@@ -133,7 +133,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSSTAT",
             "keySequence": 0,
             "label": "Completion Status",
@@ -143,7 +143,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSLOC",
             "keySequence": 0,
             "label": "Location of Vital Signs Measurement",
@@ -153,7 +153,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSLOBXFL",
             "keySequence": 0,
             "label": "Last Observation Before Exposure Flag",
@@ -163,7 +163,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSREPNUM",
             "keySequence": 6,
             "label": "Repetition Number",
@@ -173,7 +173,7 @@
         },
         {
             "dataType": "decimal",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VISITNUM",
             "keySequence": 5,
             "label": "Visit Number",
@@ -183,7 +183,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VISIT",
             "keySequence": 0,
             "label": "Visit Name",
@@ -193,7 +193,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.EPOCH",
             "keySequence": 0,
             "label": "Epoch",
@@ -203,7 +203,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSDTC",
             "keySequence": 0,
             "label": "Date/Time of Measurements",
@@ -213,7 +213,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.VS.VSDY",
             "keySequence": 0,
             "label": "Study Day of Vital Signs",
@@ -226,14 +226,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/vs",
     "label": "Vital Signs",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "VS",
     "originator": "CDISC SDTM MSG Team",
     "records": 1414,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.VS",
     "rows": [
         [

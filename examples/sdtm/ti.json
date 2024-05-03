@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TI.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TI.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TI.IETESTCD",
             "keySequence": 2,
             "label": "Incl/Excl Criterion Short Name",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TI.IETEST",
             "keySequence": 0,
             "label": "Inclusion/Exclusion Criterion",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TI.IECAT",
             "keySequence": 0,
             "label": "Inclusion/Exclusion Category",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TI.TIVERS",
             "keySequence": 3,
             "label": "Protocol Criteria Versions",
@@ -76,14 +76,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/ti",
     "label": "Trial Inclusion/Exclusion Criteria",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "TI",
     "originator": "CDISC SDTM MSG Team",
     "records": 62,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.TI",
     "rows": [
         [

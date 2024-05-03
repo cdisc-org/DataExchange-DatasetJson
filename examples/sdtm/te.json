@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TE.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TE.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TE.ETCD",
             "keySequence": 2,
             "label": "Element Code",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TE.ELEMENT",
             "keySequence": 0,
             "label": "Description of Element",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TE.TESTRL",
             "keySequence": 0,
             "label": "Rule for Start of Element",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.TE.TEENRL",
             "keySequence": 0,
             "label": "Rule for End of Element",
@@ -76,14 +76,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/te",
     "label": "Trial Elements",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "TE",
     "originator": "CDISC SDTM MSG Team",
     "records": 5,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.TE",
     "rows": [
         [

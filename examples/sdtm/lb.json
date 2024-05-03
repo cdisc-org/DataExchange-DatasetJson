@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.USUBJID",
             "keySequence": 2,
             "label": "Unique Subject Identifier",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBSEQ",
             "keySequence": 0,
             "label": "Sequence Number",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBTESTCD",
             "keySequence": 4,
             "label": "Lab Test or Examination Short Name",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBTEST",
             "keySequence": 0,
             "label": "Lab Test or Examination Name",
@@ -73,7 +73,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBCAT",
             "keySequence": 3,
             "label": "Category for Lab Test",
@@ -83,7 +83,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBORRES",
             "keySequence": 0,
             "label": "Result or Finding in Original Units",
@@ -93,7 +93,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBORRESU",
             "keySequence": 0,
             "label": "Original Units",
@@ -103,7 +103,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBORNRLO",
             "keySequence": 0,
             "label": "Reference Range Lower Limit in Orig Unit",
@@ -113,7 +113,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBORNRHI",
             "keySequence": 0,
             "label": "Reference Range Upper Limit in Orig Unit",
@@ -123,7 +123,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBSTRESC",
             "keySequence": 0,
             "label": "Character Result/Finding in Std Format",
@@ -133,7 +133,7 @@
         },
         {
             "dataType": "float",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBSTRESN",
             "keySequence": 0,
             "label": "Numeric Result/Finding in Standard Units",
@@ -143,7 +143,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBSTRESU",
             "keySequence": 0,
             "label": "Standard Units",
@@ -153,7 +153,7 @@
         },
         {
             "dataType": "decimal",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBSTNRLO",
             "keySequence": 0,
             "label": "Reference Range Lower Limit-Std Units",
@@ -163,7 +163,7 @@
         },
         {
             "dataType": "decimal",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBSTNRHI",
             "keySequence": 0,
             "label": "Reference Range Upper Limit-Std Units",
@@ -173,7 +173,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBNRIND",
             "keySequence": 0,
             "label": "Reference Range Indicator",
@@ -183,7 +183,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBLOBXFL",
             "keySequence": 0,
             "label": "Last Observation Before Exposure Flag",
@@ -193,7 +193,7 @@
         },
         {
             "dataType": "decimal",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.VISITNUM",
             "keySequence": 6,
             "label": "Visit Number",
@@ -203,7 +203,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.VISIT",
             "keySequence": 0,
             "label": "Visit Name",
@@ -213,7 +213,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.EPOCH",
             "keySequence": 0,
             "label": "Epoch",
@@ -223,7 +223,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBDTC",
             "keySequence": 5,
             "label": "Date/Time of Specimen Collection",
@@ -233,7 +233,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.LB.LBDY",
             "keySequence": 0,
             "label": "Study Day of Specimen Collection",
@@ -246,14 +246,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/lb",
     "label": "Laboratory Test Results",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "LB",
     "originator": "CDISC SDTM MSG Team",
     "records": 3488,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.LB",
     "rows": [
         [

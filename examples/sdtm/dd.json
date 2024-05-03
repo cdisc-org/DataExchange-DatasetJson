@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.USUBJID",
             "keySequence": 2,
             "label": "Unique Subject Identifier",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DDSEQ",
             "keySequence": 0,
             "label": "Sequence Number",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DDLNKID",
             "keySequence": 0,
             "label": "Link ID",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DDTESTCD",
             "keySequence": 3,
             "label": "Death Detail Assessment Short Name",
@@ -73,7 +73,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DDTEST",
             "keySequence": 0,
             "label": "Death Detail Assessment Name",
@@ -83,7 +83,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DDORRES",
             "keySequence": 0,
             "label": "Result or Finding as Collected",
@@ -93,7 +93,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DDSTRESC",
             "keySequence": 0,
             "label": "Character Result/Finding in Std Format",
@@ -103,7 +103,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.EPOCH",
             "keySequence": 0,
             "label": "Epoch",
@@ -113,7 +113,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DDDTC",
             "keySequence": 0,
             "label": "Date/Time of Collection",
@@ -123,7 +123,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.DD.DDDY",
             "keySequence": 0,
             "label": "Study Day of Collection",
@@ -136,14 +136,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/dd",
     "label": "Death Details",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "DD",
     "originator": "CDISC SDTM MSG Team",
     "records": 3,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.DD",
     "rows": [
         [

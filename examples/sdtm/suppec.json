@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.RDOMAIN",
             "keySequence": 2,
             "label": "Related Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.USUBJID",
             "keySequence": 3,
             "label": "Unique Subject Identifier",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.IDVAR",
             "keySequence": 4,
             "label": "Identifying Variable",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.IDVARVAL",
             "keySequence": 5,
             "label": "Identifying Variable Value",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.QNAM",
             "keySequence": 6,
             "label": "Qualifier Variable Name",
@@ -73,7 +73,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.QLABEL",
             "keySequence": 0,
             "label": "Qualifier Variable Label",
@@ -83,7 +83,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.QVAL",
             "keySequence": 0,
             "label": "Data Value",
@@ -93,7 +93,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.QORIG",
             "keySequence": 0,
             "label": "Origin",
@@ -103,7 +103,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.SUPPEC.QEVAL",
             "keySequence": 0,
             "label": "Evaluator",
@@ -116,14 +116,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/suppec",
     "label": "Supplemental Qualifiers for EC",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "SUPPEC",
     "originator": "CDISC SDTM MSG Team",
     "records": 7,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.SUPPEC",
     "rows": [
         [

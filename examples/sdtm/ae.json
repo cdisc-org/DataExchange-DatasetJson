@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.USUBJID",
             "keySequence": 2,
             "label": "Unique Subject Identifier",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESEQ",
             "keySequence": 0,
             "label": "Sequence Number",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AELNKID",
             "keySequence": 5,
             "label": "Link ID",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AETERM",
             "keySequence": 0,
             "label": "Reported Term for the Adverse Event",
@@ -73,7 +73,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AELLT",
             "keySequence": 0,
             "label": "Lowest Level Term",
@@ -83,7 +83,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AELLTCD",
             "keySequence": 0,
             "label": "Lowest Level Term Code",
@@ -93,7 +93,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEDECOD",
             "keySequence": 3,
             "label": "Dictionary-Derived Term",
@@ -103,7 +103,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEPTCD",
             "keySequence": 0,
             "label": "Preferred Term Code",
@@ -113,7 +113,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEHLT",
             "keySequence": 0,
             "label": "High Level Term",
@@ -123,7 +123,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEHLTCD",
             "keySequence": 0,
             "label": "High Level Term Code",
@@ -133,7 +133,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEHLGT",
             "keySequence": 0,
             "label": "High Level Group Term",
@@ -143,7 +143,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEHLGTCD",
             "keySequence": 0,
             "label": "High Level Group Term Code",
@@ -153,7 +153,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEBODSYS",
             "keySequence": 0,
             "label": "Body System or Organ Class",
@@ -163,7 +163,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEBDSYCD",
             "keySequence": 0,
             "label": "Body System or Organ Class Code",
@@ -173,7 +173,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESOC",
             "keySequence": 0,
             "label": "Primary System Organ Class",
@@ -183,7 +183,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESOCCD",
             "keySequence": 0,
             "label": "Primary System Organ Class Code",
@@ -193,7 +193,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESEV",
             "keySequence": 0,
             "label": "Severity/Intensity",
@@ -203,7 +203,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESER",
             "keySequence": 0,
             "label": "Serious Event",
@@ -213,7 +213,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEACN",
             "keySequence": 0,
             "label": "Action Taken with Study Treatment",
@@ -223,7 +223,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEREL",
             "keySequence": 0,
             "label": "Causality",
@@ -233,7 +233,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEOUT",
             "keySequence": 0,
             "label": "Outcome of Adverse Event",
@@ -243,7 +243,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESCAN",
             "keySequence": 0,
             "label": "Involves Cancer",
@@ -253,7 +253,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESCONG",
             "keySequence": 0,
             "label": "Congenital Anomaly or Birth Defect",
@@ -263,7 +263,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESDISAB",
             "keySequence": 0,
             "label": "Persist or Signif Disability/Incapacity",
@@ -273,7 +273,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESDTH",
             "keySequence": 0,
             "label": "Results in Death",
@@ -283,7 +283,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESHOSP",
             "keySequence": 0,
             "label": "Requires or Prolongs Hospitalization",
@@ -293,7 +293,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESLIFE",
             "keySequence": 0,
             "label": "Is Life Threatening",
@@ -303,7 +303,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESOD",
             "keySequence": 0,
             "label": "Occurred with Overdose",
@@ -313,7 +313,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.EPOCH",
             "keySequence": 0,
             "label": "Epoch",
@@ -323,7 +323,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESTDTC",
             "keySequence": 4,
             "label": "Start Date/Time of Adverse Event",
@@ -333,7 +333,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEENDTC",
             "keySequence": 0,
             "label": "End Date/Time of Adverse Event",
@@ -343,7 +343,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AESTDY",
             "keySequence": 0,
             "label": "Study Day of Start of Adverse Event",
@@ -353,7 +353,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEENDY",
             "keySequence": 0,
             "label": "Study Day of End of Adverse Event",
@@ -363,7 +363,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEENRTPT",
             "keySequence": 0,
             "label": "End Relative to Reference Time Point",
@@ -373,7 +373,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.AE.AEENTPT",
             "keySequence": 0,
             "label": "End Reference Time Point",
@@ -386,14 +386,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/ae",
     "label": "Adverse Events",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "AE",
     "originator": "CDISC SDTM MSG Team",
     "records": 74,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.AE",
     "rows": [
         [

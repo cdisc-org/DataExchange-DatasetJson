@@ -1,9 +1,8 @@
 {
-    "asOfDateTime": "",
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +12,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.STUDYID",
             "keySequence": 0,
             "label": "Study Identifier",
@@ -23,7 +22,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.SITEID",
             "keySequence": 0,
             "label": "Study Site Identifier",
@@ -33,7 +32,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.USUBJID",
             "keySequence": 1,
             "label": "Unique Subject Identifier",
@@ -43,7 +42,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.AGE",
             "keySequence": 0,
             "label": "Age",
@@ -53,7 +52,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.AGEGR1",
             "keySequence": 0,
             "label": "Pooled Age Group 1",
@@ -63,7 +62,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.AGEGR1N",
             "keySequence": 0,
             "label": "Pooled Age Group 1 (N)",
@@ -73,7 +72,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.RACE",
             "keySequence": 0,
             "label": "Race",
@@ -83,7 +82,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.RACEN",
             "keySequence": 0,
             "label": "Race (N)",
@@ -93,7 +92,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.SEX",
             "keySequence": 0,
             "label": "Sex",
@@ -123,7 +122,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.TRTDUR",
             "keySequence": 0,
             "label": "Duration of treatment (days)",
@@ -133,7 +132,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.TRTP",
             "keySequence": 0,
             "label": "Planned Treatment",
@@ -143,7 +142,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.TRTA",
             "keySequence": 0,
             "label": "Actual Treatment",
@@ -153,7 +152,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.TRTAN",
             "keySequence": 0,
             "label": "Actual Treatment (N)",
@@ -163,7 +162,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.PARAM",
             "keySequence": 0,
             "label": "Parameter",
@@ -173,7 +172,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.PARAMCD",
             "keySequence": 2,
             "label": "Parameter Code",
@@ -183,7 +182,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.AVAL",
             "keySequence": 0,
             "label": "Analysis Value",
@@ -213,7 +212,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.CNSR",
             "keySequence": 0,
             "label": "Censor",
@@ -223,7 +222,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.EVNTDESC",
             "keySequence": 0,
             "label": "Event or Censoring Description",
@@ -233,7 +232,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.SRCDOM",
             "keySequence": 0,
             "label": "Source Domain",
@@ -243,7 +242,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.SRCVAR",
             "keySequence": 0,
             "label": "Source Variable",
@@ -253,7 +252,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.SRCSEQ",
             "keySequence": 0,
             "label": "Source Sequence Number",
@@ -263,7 +262,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.ADTTE.SAFFL",
             "keySequence": 0,
             "label": "Safety Population Flag",
@@ -276,14 +275,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/adtte",
     "label": "AE Time To 1st Derm. Event Analysis",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "ADTTE",
     "originator": "CDISC ADaM MSG Team",
     "records": 254,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/TDF_ADaM_ADaMIG11/define.xml",
+    "metaDataVersionOID": "MDV.TDF_ADaM.ADaMIG.1.1",
+    "studyOID": "TDF_ADaM.ADaMIG.1.1",
     "itemGroupOID": "IG.ADTTE",
     "rows": [
         [

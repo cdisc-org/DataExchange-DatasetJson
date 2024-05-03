@@ -3,56 +3,59 @@ import json
 
 def convert_1_0_to_1_1(old):
     new = {
-        "asOfDateTime": old.get("asOfDateTime", ""),
+        "asOfDateTime": old.get("asOfDateTime"),
         "columns": [],
-        "creationDateTime": old.get("creationDateTime", ""),
-        "datasetJSONVersion": old.get("datasetJSONVersion", ""),
-        "fileOID": old.get("fileOID", ""),
-        "label": old.get("fileOID", ""),
-        "metaDataRef": old.get("metaDataRef", ""),
-        "metaDataVersionOID": old.get("metaDataVersionOID", ""),
-        "name": old.get("fileOID", ""), 
-        "originator": old.get("originator", ""),
+        "creationDateTime": old.get("creationDateTime"),
+        "datasetJSONVersion": old.get("datasetJSONVersion"),
+        "fileOID": old.get("fileOID"),
+        "label": old.get("fileOID"),
+        "name": old.get("fileOID"), 
+        "originator": old.get("originator"),
         "records": 0,
-        "sourceSystem": old.get("sourceSystem", ""),
-        "sourceSystemVersion": old.get("sourceSystemVersion", ""),
-        "studyOID": old.get("studyOID", ""),
+        "sourceSystem": old.get("sourceSystem"),
+        "sourceSystemVersion": old.get("sourceSystemVersion"),
     }
     
     for data_type in ["clinicalData", "referenceData"]:
-        if data_type in old:
-            for item_group_oid, item_group_data in old[data_type]["itemGroupData"].items():
-                new['itemGroupOID'] = item_group_oid
-                new['name'] = item_group_data.get('name') or new['name']
-                new['label'] = item_group_data.get('label') or new['label']
-                columns = []
-                for item in item_group_data["items"]:
-                    column = {
-                        "dataType": item["type"],
-                        "displayFormat": item.get("displayFormat", ""),
-                        "itemOID": item["OID"],
-                        "keySequence": item.get("keySequence", 0),
-                        "label": item["label"],
-                        "length": item.get("length", 0),
-                        "name": item["name"],
-                        "targetDataType": item["type"]
-                    }
-                    columns.append(column)
-                new["columns"].extend(columns)
+        data = old.get(data_type)
+        if not data:
+            continue
+        new["metaDataRef"] = data.get("metaDataRef")
+        new["metaDataVersionOID"] = data.get("metaDataVersionOID")
+        new["studyOID"] = data.get("studyOID")
 
-                def array_generator():
-                    for row in item_group_data.get("itemData",[]):
-                        yield row
-                array_iter = iter(array_generator())
-                first_row = next(array_iter, None)
-                new['records'] = item_group_data.get('records')
-                if first_row is not None:
-                    new['records'] = new['records'] or 1 + sum(1 for _ in array_iter)
-                    new['rows'] = item_group_data.get('itemData')
-                else:
-                    print("No rows found.")
+        for item_group_oid, item_group_data in data["itemGroupData"].items():        
+            new['itemGroupOID'] = item_group_oid
+            new['name'] = item_group_data.get('name') or new['name']
+            new['label'] = item_group_data.get('label') or new['label']
+            columns = []
+            for item in item_group_data["items"]:
+                column = {
+                    "dataType": item["type"],
+                    "displayFormat": item.get("displayFormat"),
+                    "itemOID": item["OID"],
+                    "keySequence": item.get("keySequence", 0),
+                    "label": item["label"],
+                    "length": item.get("length", 0),
+                    "name": item["name"],
+                    "targetDataType": item["type"]
+                }
+                columns.append(column)
+            new["columns"].extend(columns)
 
-    return new
+            def array_generator():
+                for row in item_group_data.get("itemData",[]):
+                    yield row
+            array_iter = iter(array_generator())
+            first_row = next(array_iter, None)
+            new['records'] = item_group_data.get('records')
+            if first_row is not None:
+                new['records'] = new['records'] or 1 + sum(1 for _ in array_iter)
+                new['rows'] = item_group_data.get('itemData')
+            else:
+                print("No rows found.")
+
+    return {k:v for k,v in new.items() if v is not None}
 
 def process_json_file(filename, new_filename, schema = 'schema/dataset.schema.json'):
     assert filename

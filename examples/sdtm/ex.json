@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.USUBJID",
             "keySequence": 2,
             "label": "Unique Subject Identifier",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.SPDEVID",
             "keySequence": 0,
             "label": "Sponsor Device Identifier",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXSEQ",
             "keySequence": 0,
             "label": "Sequence Number",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXTRT",
             "keySequence": 3,
             "label": "Name of Treatment",
@@ -73,7 +73,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXDOSE",
             "keySequence": 0,
             "label": "Dose",
@@ -83,7 +83,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXDOSU",
             "keySequence": 0,
             "label": "Dose Units",
@@ -93,7 +93,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXDOSFRM",
             "keySequence": 0,
             "label": "Dose Form",
@@ -103,7 +103,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXDOSFRQ",
             "keySequence": 0,
             "label": "Dosing Frequency per Interval",
@@ -113,7 +113,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXROUTE",
             "keySequence": 0,
             "label": "Route of Administration",
@@ -123,7 +123,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXLOT",
             "keySequence": 0,
             "label": "Lot Number",
@@ -133,7 +133,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EPOCH",
             "keySequence": 0,
             "label": "Epoch",
@@ -143,7 +143,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXSTDTC",
             "keySequence": 4,
             "label": "Start Date/Time of Treatment",
@@ -153,7 +153,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXENDTC",
             "keySequence": 0,
             "label": "End Date/Time of Treatment",
@@ -163,7 +163,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXSTDY",
             "keySequence": 0,
             "label": "Study Day of Start of Treatment",
@@ -173,7 +173,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.EX.EXENDY",
             "keySequence": 0,
             "label": "Study Day of End of Treatment",
@@ -186,14 +186,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/ex",
     "label": "Exposure",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "EX",
     "originator": "CDISC SDTM MSG Team",
     "records": 1583,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.EX",
     "rows": [
         [

@@ -3,7 +3,7 @@
     "columns": [
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "ITEMGROUPDATASEQ",
             "keySequence": 0,
             "label": "Record Identifier",
@@ -13,7 +13,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.STUDYID",
             "keySequence": 1,
             "label": "Study Identifier",
@@ -23,7 +23,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.DOMAIN",
             "keySequence": 0,
             "label": "Domain Abbreviation",
@@ -33,7 +33,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.USUBJID",
             "keySequence": 2,
             "label": "Unique Subject Identifier",
@@ -43,7 +43,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMSEQ",
             "keySequence": 0,
             "label": "Sequence Number",
@@ -53,7 +53,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMTRT",
             "keySequence": 4,
             "label": "Reported Name of Drug, Med, or Therapy",
@@ -63,7 +63,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMINDC",
             "keySequence": 0,
             "label": "Indication",
@@ -73,7 +73,7 @@
         },
         {
             "dataType": "decimal",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMDOSE",
             "keySequence": 0,
             "label": "Dose per Administration",
@@ -83,7 +83,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMDOSU",
             "keySequence": 0,
             "label": "Dose Units",
@@ -93,7 +93,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMDOSFRQ",
             "keySequence": 0,
             "label": "Dosing Frequency per Interval",
@@ -103,7 +103,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMROUTE",
             "keySequence": 0,
             "label": "Route of Administration",
@@ -113,7 +113,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.EPOCH",
             "keySequence": 0,
             "label": "Epoch",
@@ -123,7 +123,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMSTDTC",
             "keySequence": 3,
             "label": "Start Date/Time of Medication",
@@ -133,7 +133,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMENDTC",
             "keySequence": 0,
             "label": "End Date/Time of Medication",
@@ -143,7 +143,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMSTDY",
             "keySequence": 0,
             "label": "Study Day of Start of Medication",
@@ -153,7 +153,7 @@
         },
         {
             "dataType": "integer",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMENDY",
             "keySequence": 0,
             "label": "Study Day of End of Medication",
@@ -163,7 +163,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMENRTPT",
             "keySequence": 0,
             "label": "End Relative to Reference Time Point",
@@ -173,7 +173,7 @@
         },
         {
             "dataType": "string",
-            "displayFormat": "",
+            "displayFormat": null,
             "itemOID": "IT.CM.CMENTPT",
             "keySequence": 0,
             "label": "End Reference Time Point",
@@ -186,14 +186,14 @@
     "datasetJSONVersion": "1.0.0",
     "fileOID": "www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0/2023-06-28/cm",
     "label": "Concomitant Medications",
-    "metaDataRef": "",
-    "metaDataVersionOID": "",
     "name": "CM",
     "originator": "CDISC SDTM MSG Team",
     "records": 68,
     "sourceSystem": "Sponsor System",
     "sourceSystemVersion": "1.0",
-    "studyOID": "",
+    "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml",
+    "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7",
+    "studyOID": "cdisc.com/CDISCPILOT01",
     "itemGroupOID": "IG.CM",
     "rows": [
         [

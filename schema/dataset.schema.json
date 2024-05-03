@@ -10,7 +10,10 @@
                 },
                 "displayFormat": {
                     "description": "Display format supports data visualization of numeric float and date values.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "itemOID": {
                     "description": "OID of a variable (must correspond to the variable OID in the Define-XML file)",
@@ -205,7 +208,10 @@
     "properties": {
         "asOfDateTime": {
             "description": "The date/time at which the source database was queried in order to create this document.",
-            "type": "string"
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "columns": {
             "description": "Basic information about variables",
@@ -240,7 +246,10 @@
         },
         "metaDataRef": {
             "description": "URL for a metadata file the describing the data.",
-            "type": "string"
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "metaDataVersionOID": {
             "description": "See ODM definition for metadata version OID (ODM/Study/MetaDataVersion/@OID).",
@@ -252,7 +261,10 @@
         },
         "originator": {
             "description": "The organization that generated the Dataset-JSON file.",
-            "type": "string"
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "records": {
             "description": "The total number of records in a dataset",
