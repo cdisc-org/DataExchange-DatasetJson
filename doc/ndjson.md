@@ -27,7 +27,7 @@ The NDJSON format is created from the Dataset-JSON standard by:
 * Row 2. Create 1 JSON object that contains an array of column metadata definitions
 * Row 3 - n. Create 1 array per data row
 
-![NDJSON Structure](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/doc/img/ndjson-json-structure.JPG?raw=true)
+![NDJSON Structure](https://github.com/cdisc-org/DataExchange-DatasetJson/blob/doc/doc/img/ndjson-json-structure.JPG?raw=true)
 
 ### Examples
 
