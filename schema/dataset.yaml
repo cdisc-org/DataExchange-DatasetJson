@@ -133,3 +133,4 @@ enums:
       double:
       boolean:
       datetime:
+      date:

@@ -1,12 +1,12 @@
 from jsonschema import validate
 import json
 
-def convert_1_0_to_1_1(old):
+def convert_1_0_to_1_1(old, date_formats = ['yymmdd', 'date', 'iso8601']):
     new = {
         "asOfDateTime": old.get("asOfDateTime"),
         "columns": [],
         "creationDateTime": old.get("creationDateTime"),
-        "datasetJSONVersion": old.get("datasetJSONVersion"),
+        "datasetJSONVersion": "1.1.0",
         "fileOID": old.get("fileOID"),
         "label": old.get("fileOID"),
         "name": old.get("fileOID"), 
@@ -30,17 +30,18 @@ def convert_1_0_to_1_1(old):
             new['label'] = item_group_data.get('label') or new['label']
             columns = []
             for item in item_group_data["items"]:
+                is_date = any(match in item.get("displayFormat", "").lower() for match in date_formats)
                 column = {
                     "dataType": item["type"],
-                    "displayFormat": item.get("displayFormat"),
+                    "displayFormat": item.get("displayFormat", None),
                     "itemOID": item["OID"],
-                    "keySequence": item.get("keySequence", 0),
+                    "keySequence": item.get("keySequence", None),
                     "label": item["label"],
-                    "length": item.get("length", 0),
+                    "length": item.get("length", None),
                     "name": item["name"],
-                    "targetDataType": item["type"]
+                    "targetDataType": "date" if is_date else None
                 }
-                columns.append(column)
+                columns.append({k:v for k,v in column.items() if v is not None})
             new["columns"].extend(columns)
 
             def array_generator():
@@ -70,6 +71,6 @@ def process_json_file(filename, new_filename, schema = 'schema/dataset.schema.js
         validation_findings = validate(instance = new_json_data, schema = json.load(schema_file))
     if not validation_findings:
         with open(new_filename, 'w') as new_file:
-            json.dump(new_json_data, new_file, indent=4)
+            json.dump(new_json_data, new_file)
     else:
         print('Validation issues found with', filename)
