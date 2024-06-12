@@ -124,6 +124,7 @@ enums:
       float:
       double:
       boolean:
+      datetime:
   TargetDataTypesEnum:
     permissible_values:
       string:
@@ -132,5 +133,3 @@ enums:
       float:
       double:
       boolean:
-      datetime:
-      date:

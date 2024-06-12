@@ -54,7 +54,8 @@
                 "decimal",
                 "float",
                 "double",
-                "boolean"
+                "boolean",
+                "datetime"
             ],
             "title": "DataTypesEnum",
             "type": "string"
@@ -190,9 +191,7 @@
                 "decimal",
                 "float",
                 "double",
-                "boolean",
-                "datetime",
-                "date"
+                "boolean"
             ],
             "title": "TargetDataTypesEnum",
             "type": "string"

@@ -1,20 +1,22 @@
 from jsonschema import validate
+from collections import OrderedDict
 import json
 
 def convert_1_0_to_1_1(old, date_formats = ['yymmdd', 'date', 'iso8601']):
-    new = {
-        "asOfDateTime": old.get("asOfDateTime"),
-        "columns": [],
+    new = OrderedDict({
         "creationDateTime": old.get("creationDateTime"),
         "datasetJSONVersion": "1.1.0",
         "fileOID": old.get("fileOID"),
-        "label": old.get("fileOID"),
         "name": old.get("fileOID"), 
+        "label": old.get("fileOID"),
+        "asOfDateTime": old.get("asOfDateTime"),
         "originator": old.get("originator"),
-        "records": 0,
         "sourceSystem": old.get("sourceSystem"),
         "sourceSystemVersion": old.get("sourceSystemVersion"),
-    }
+        "records": 0,
+        "columns": [],
+        "rows": [],
+    })
     
     for data_type in ["clinicalData", "referenceData"]:
         data = old.get(data_type)
@@ -30,17 +32,25 @@ def convert_1_0_to_1_1(old, date_formats = ['yymmdd', 'date', 'iso8601']):
             new['label'] = item_group_data.get('label') or new['label']
             columns = []
             for item in item_group_data["items"]:
-                is_date = any(match in item.get("displayFormat", "").lower() for match in date_formats)
-                column = {
-                    "dataType": item["type"],
-                    "displayFormat": item.get("displayFormat", None),
+                
+                column = OrderedDict({
                     "itemOID": item["OID"],
-                    "keySequence": item.get("keySequence", None),
-                    "label": item["label"],
-                    "length": item.get("length", None),
                     "name": item["name"],
-                    "targetDataType": "date" if is_date else None
-                }
+                    "label": item["label"],
+                    "dataType": item["type"],
+                    "targetDataType": None,
+                    "length": item.get("length", None),
+                    "displayFormat": item.get("displayFormat", None),
+                    "keySequence": item.get("keySequence", None)
+                })
+
+                if any(f in item.get("displayFormat", "").lower() for f in date_formats):
+                    column["dataType"] = "datetime"
+                    column["targetDataType"] = item["type"]
+                elif item["type"] == "decimal":
+                    column["dataType"] = "string"
+                    column["targetDataType"] = item["type"]
+
                 columns.append({k:v for k,v in column.items() if v is not None})
             new["columns"].extend(columns)
 
