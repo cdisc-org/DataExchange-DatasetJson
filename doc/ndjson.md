@@ -28,7 +28,7 @@ The Dataset-JSON NDJSON format is created from the Dataset-JSON standard by:
 * Row 2. Create 1 JSON object that contains an array of variable metadata definitions taken from the columns attribute.
 * Row 3 - n. Create 1 array per data row
 
-![NDJSON Proposed Changes](https://github.com/swhume/dataset-NDJSON/blob/master/docs/NDJSON-JSON-structure.JPG?raw=true)
+![NDJSON Proposed Changes](/doc/img/ndjson-json-structure.JPG?raw=true)
 
 Each row can be parsed and processed as standalone JSON text.
 
