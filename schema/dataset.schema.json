@@ -18,6 +18,7 @@
                 },
                 "keySequence": {
                     "description": "Indicates that this item is a key variable in the dataset structure. It also provides an ordering for the keys.",
+                    "minimum": 1,
                     "type": "integer"
                 },
                 "label": {
@@ -26,6 +27,7 @@
                 },
                 "length": {
                     "description": "Variable length",
+                    "minimum": 1,
                     "type": "integer"
                 },
                 "name": {
@@ -55,7 +57,10 @@
                 "float",
                 "double",
                 "boolean",
-                "datetime"
+                "datetime",
+                "date",
+                "time",
+                "URI"
             ],
             "title": "DataTypesEnum",
             "type": "string"
@@ -66,6 +71,7 @@
             "properties": {
                 "asOfDateTime": {
                     "description": "The date/time at which the source database was queried in order to create this document.",
+                    "pattern": "^([0-9][0-9][0-9][0-9])(-(([0][1-9])|([1][0-2])))(-(([0][1-9])|([1-2][0-9])|([3][0-1])))T(([0-1][0-9])|([2][0-3])):([0-5][0-9])(:([0-5][0-9]))((\\.[0-9]+))?((((\\+|-)(([0-1][0-9])|([2][0-3])):[0-5][0-9])|(Z)))?$",
                     "type": "string"
                 },
                 "columns": {
@@ -77,19 +83,21 @@
                 },
                 "creationDateTime": {
                     "description": "Time of creation of the file containing the document.",
+                    "pattern": "^([0-9][0-9][0-9][0-9])(-(([0][1-9])|([1][0-2])))(-(([0][1-9])|([1-2][0-9])|([3][0-1])))T(([0-1][0-9])|([2][0-3])):([0-5][0-9])(:([0-5][0-9]))((\\.[0-9]+))?((((\\+|-)(([0-1][0-9])|([2][0-3])):[0-5][0-9])|(Z)))?$",
                     "type": "string"
                 },
                 "datasetJSONVersion": {
                     "description": "Version of Dataset-JSON standard",
-                    "type": "string"
-                },
-                "datasetType": {
-                    "description": "For CDISC backward compatibility, is this referenceData or clinicalData",
+                    "pattern": "^1.1(.(0|([1-9][0-9]*)))?$",
                     "type": "string"
                 },
                 "fileOID": {
                     "description": "A unique identifier for this file.",
                     "type": "string"
+                },
+                "isReferenceData": {
+                    "description": "Boolean value that is set to true when the dataset contains reference data (not subject data)",
+                    "type": "boolean"
                 },
                 "itemGroupOID": {
                     "description": "Foreign key to ItemGroupDef.OID in Define / MDR",
@@ -117,6 +125,7 @@
                 },
                 "records": {
                     "description": "The total number of records in a dataset",
+                    "minimum": 0,
                     "type": "integer"
                 },
                 "rows": {
@@ -127,12 +136,7 @@
                     "type": "array"
                 },
                 "sourceSystem": {
-                    "description": "The computer system or database management system that is the source of the information in this file.",
-                    "type": "string"
-                },
-                "sourceSystemVersion": {
-                    "description": "The version of the \"SourceSystem\" above.",
-                    "type": "string"
+                    "description": "The computer system or database management system that is the source of the information in this file."
                 },
                 "studyOID": {
                     "description": "See ODM definition for study OID (ODM/Study/@OID).",
@@ -142,6 +146,7 @@
             "required": [
                 "creationDateTime",
                 "datasetJSONVersion",
+                "itemGroupOID",
                 "records",
                 "name",
                 "label",
@@ -186,12 +191,8 @@
         "TargetDataTypesEnum": {
             "description": "",
             "enum": [
-                "string",
                 "integer",
-                "decimal",
-                "float",
-                "double",
-                "boolean"
+                "decimal"
             ],
             "title": "TargetDataTypesEnum",
             "type": "string"
@@ -205,6 +206,7 @@
     "properties": {
         "asOfDateTime": {
             "description": "The date/time at which the source database was queried in order to create this document.",
+            "pattern": "^([0-9][0-9][0-9][0-9])(-(([0][1-9])|([1][0-2])))(-(([0][1-9])|([1-2][0-9])|([3][0-1])))T(([0-1][0-9])|([2][0-3])):([0-5][0-9])(:([0-5][0-9]))((\\.[0-9]+))?((((\\+|-)(([0-1][0-9])|([2][0-3])):[0-5][0-9])|(Z)))?$",
             "type": "string"
         },
         "columns": {
@@ -216,19 +218,21 @@
         },
         "creationDateTime": {
             "description": "Time of creation of the file containing the document.",
+            "pattern": "^([0-9][0-9][0-9][0-9])(-(([0][1-9])|([1][0-2])))(-(([0][1-9])|([1-2][0-9])|([3][0-1])))T(([0-1][0-9])|([2][0-3])):([0-5][0-9])(:([0-5][0-9]))((\\.[0-9]+))?((((\\+|-)(([0-1][0-9])|([2][0-3])):[0-5][0-9])|(Z)))?$",
             "type": "string"
         },
         "datasetJSONVersion": {
             "description": "Version of Dataset-JSON standard",
-            "type": "string"
-        },
-        "datasetType": {
-            "description": "For CDISC backward compatibility, is this referenceData or clinicalData",
+            "pattern": "^1.1(.(0|([1-9][0-9]*)))?$",
             "type": "string"
         },
         "fileOID": {
             "description": "A unique identifier for this file.",
             "type": "string"
+        },
+        "isReferenceData": {
+            "description": "Boolean value that is set to true when the dataset contains reference data (not subject data)",
+            "type": "boolean"
         },
         "itemGroupOID": {
             "description": "Foreign key to ItemGroupDef.OID in Define / MDR",
@@ -256,6 +260,7 @@
         },
         "records": {
             "description": "The total number of records in a dataset",
+            "minimum": 0,
             "type": "integer"
         },
         "rows": {
@@ -266,12 +271,7 @@
             "type": "array"
         },
         "sourceSystem": {
-            "description": "The computer system or database management system that is the source of the information in this file.",
-            "type": "string"
-        },
-        "sourceSystemVersion": {
-            "description": "The version of the \"SourceSystem\" above.",
-            "type": "string"
+            "description": "The computer system or database management system that is the source of the information in this file."
         },
         "studyOID": {
             "description": "See ODM definition for study OID (ODM/Study/@OID).",
@@ -281,6 +281,7 @@
     "required": [
         "creationDateTime",
         "datasetJSONVersion",
+        "itemGroupOID",
         "records",
         "name",
         "label",

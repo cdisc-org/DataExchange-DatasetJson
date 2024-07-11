@@ -3,3 +3,4 @@ examples/big_xpt/*.xpt
 .Rproj.user
 .Rhistory
 __pycache__
+.venv

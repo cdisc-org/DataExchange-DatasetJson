@@ -16,23 +16,23 @@ classes:
       creationDateTime:
         description: Time of creation of the file containing the document.
         required: true
+        pattern: "^([0-9][0-9][0-9][0-9])(-(([0][1-9])|([1][0-2])))(-(([0][1-9])|([1-2][0-9])|([3][0-1])))T(([0-1][0-9])|([2][0-3])):([0-5][0-9])(:([0-5][0-9]))((\\.[0-9]+))?((((\\+|-)(([0-1][0-9])|([2][0-3])):[0-5][0-9])|(Z)))?$"
       datasetJSONVersion:
         description: Version of Dataset-JSON standard
         required: true
+        pattern: "^1.1(.(0|([1-9][0-9]*)))?$"
       fileOID:
         description: A unique identifier for this file.
       asOfDateTime:
         description: The date/time at which the source database was queried in order to create this document.
         required: false
+        pattern: "^([0-9][0-9][0-9][0-9])(-(([0][1-9])|([1][0-2])))(-(([0][1-9])|([1-2][0-9])|([3][0-1])))T(([0-1][0-9])|([2][0-3])):([0-5][0-9])(:([0-5][0-9]))((\\.[0-9]+))?((((\\+|-)(([0-1][0-9])|([2][0-3])):[0-5][0-9])|(Z)))?$"
       originator:
         description: The organization that generated the Dataset-JSON file.
       sourceSystem:
         description: The computer system or database management system that is the source of the information in this file.
-      sourceSystemVersion:
-        description: The version of the "SourceSystem" above.
-      datasetType:
-        description: For CDISC backward compatibility, is this referenceData or clinicalData
-        ifabsent: string(clinicalData)
+        required: false
+        range: sourceSystem
       studyOID:
         description: See ODM definition for study OID (ODM/Study/@OID).
       metaDataVersionOID:
@@ -41,16 +41,32 @@ classes:
         description: URL for a metadata file the describing the data.
       itemGroupOID:
         description: Foreign key to ItemGroupDef.OID in Define / MDR
+        required: true
         inverse: implemented_in_dataset
+      isReferenceData:
+        description: Boolean value that is set to true when the dataset contains reference data (not subject data)
+        range: boolean
+        ifabsent: false
       records:
         description: The total number of records in a dataset
         required: true
         range: integer
+        minimum_value: 0
       name:
         description: Dataset name
         required: true
       label:
         description: Dataset description
+        required: true
+
+  SourceSystem:
+    description: The information system from which the content of this dataset was sourced
+    attributes:
+      name:
+        description: The name of the sourceSystem
+        required: true
+      version:
+        description: The version of the sourceSystem
         required: true
 
   ColumnMetadata:
@@ -105,12 +121,14 @@ classes:
       length:
         description: Variable length
         range: integer
+        minimum_value: 1
       displayFormat:
         description: Display format supports data visualization of numeric float and date values.
       keySequence:
         description: >-
           Indicates that this item is a key variable in the dataset structure. It also provides an ordering for the keys.
         range: integer
+        minimum_value: 1
 enums:
   DataTypesEnum:
     permissible_values:
@@ -121,11 +139,10 @@ enums:
       double:
       boolean:
       datetime:
+      date:
+      time:
+      URI:
   TargetDataTypesEnum:
     permissible_values:
-      string:
       integer:
       decimal:
-      float:
-      double:
-      boolean:
