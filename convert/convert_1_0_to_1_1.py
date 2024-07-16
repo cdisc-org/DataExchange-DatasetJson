@@ -2,41 +2,48 @@ from jsonschema import validate
 from collections import OrderedDict
 import json
 
-def convert_1_0_to_1_1(old, date_formats = ['yymmdd', 'date', 'iso8601']):
+def convert_1_0_to_1_1(old, date_formats = ['yymmdd', 'date', 'e8601da']):
     new = OrderedDict({
         "creationDateTime": old.get("creationDateTime"),
         "datasetJSONVersion": "1.1.0",
         "fileOID": old.get("fileOID"),
-        "name": old.get("fileOID"), 
-        "label": old.get("fileOID"),
         "asOfDateTime": old.get("asOfDateTime"),
         "originator": old.get("originator"),
-        "sourceSystem": old.get("sourceSystem"),
-        "sourceSystemVersion": old.get("sourceSystemVersion"),
+        "sourceSystem": {},
         "studyOID": None,
         "metaDataVersionOID": None,
         "metaDataRef": None,
         "itemGroupOID": None,
+        "isReferenceData":None,
         "records": 0,
+        "name": old.get("fileOID"),
+        "label": old.get("fileOID"),
         "columns": [],
         "rows": [],
     })
-    
+
+    if old.get("sourceSystem"):
+      new["sourceSystem"]["name"] = old.get("sourceSystem", None)
+    if old.get("sourceSystemVersion"):
+      new["sourceSystem"]["version"] = old.get("sourceSystemVersion", None)
+
     for data_type in ["clinicalData", "referenceData"]:
         data = old.get(data_type)
         if not data:
             continue
+        if (data_type == "referenceData"):
+            new["isReferenceData"] = True
         new["metaDataRef"] = data.get("metaDataRef")
         new["metaDataVersionOID"] = data.get("metaDataVersionOID")
         new["studyOID"] = data.get("studyOID")
 
-        for item_group_oid, item_group_data in data["itemGroupData"].items():        
+        for item_group_oid, item_group_data in data["itemGroupData"].items():
             new['itemGroupOID'] = item_group_oid
             new['name'] = item_group_data.get('name') or new['name']
             new['label'] = item_group_data.get('label') or new['label']
             columns = []
             for item in item_group_data["items"]:
-                
+
                 column = OrderedDict({
                     "itemOID": item["OID"],
                     "name": item["name"],
@@ -49,10 +56,11 @@ def convert_1_0_to_1_1(old, date_formats = ['yymmdd', 'date', 'iso8601']):
                 })
 
                 if any(f in item.get("displayFormat", "").lower() for f in date_formats):
-                    column["dataType"] = "datetime"
+                    column["dataType"] = "date"
                     column["targetDataType"] = item["type"]
+                    column["displayFormat"] = "E8601DA." # this is not required, but good for the example.
                 elif item["type"] == "decimal":
-                    column["dataType"] = "string"
+                    column["dataType"] = "decimal"
                     column["targetDataType"] = item["type"]
 
                 columns.append({k:v for k,v in column.items() if v is not None})
@@ -77,7 +85,7 @@ def process_json_file(filename, new_filename, schema = 'schema/dataset.schema.js
     new_filename = new_filename or filename
 
     with open(filename, 'r') as file:
-        old_json_data = json.load(file)    
+        old_json_data = json.load(file)
 
     new_json_data = convert_1_0_to_1_1(old_json_data)
 
