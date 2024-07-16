@@ -32,7 +32,7 @@ classes:
       sourceSystem:
         description: The computer system or database management system that is the source of the information in this file.
         required: false
-        range: sourceSystem
+        range: SourceSystem
       studyOID:
         description: See ODM definition for study OID (ODM/Study/@OID).
       metaDataVersionOID:

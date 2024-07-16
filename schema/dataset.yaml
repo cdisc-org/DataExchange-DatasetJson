@@ -34,7 +34,7 @@ classes:
       sourceSystem:
         description: The computer system or database management system that is the source of the information in this file.
         required: false
-        range: sourceSystem
+        range: SourceSystem
       studyOID:
         description: See ODM definition for study OID (ODM/Study/@OID).
       metaDataVersionOID:
@@ -75,6 +75,16 @@ classes:
         inlined: true
         inlined_as_list: true
         range: Row
+  SourceSystem:
+    description: The information system from which the content of this dataset was sourced
+    attributes:
+      name:
+        description: The name of the sourceSystem
+        required: true
+      version:
+        description: The version of the sourceSystem
+        required: true
+
   Row:
     attributes:
       value:

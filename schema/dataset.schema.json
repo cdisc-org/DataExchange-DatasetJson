@@ -136,6 +136,7 @@
                     "type": "array"
                 },
                 "sourceSystem": {
+                    "$ref": "#/$defs/SourceSystem",
                     "description": "The computer system or database management system that is the source of the information in this file."
                 },
                 "studyOID": {
@@ -187,6 +188,26 @@
             },
             "title": "Row",
             "type": "array"
+        },
+        "SourceSystem": {
+            "additionalProperties": false,
+            "description": "The information system from which the content of this dataset was sourced",
+            "properties": {
+                "name": {
+                    "description": "The name of the sourceSystem",
+                    "type": "string"
+                },
+                "version": {
+                    "description": "The version of the sourceSystem",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "version"
+            ],
+            "title": "SourceSystem",
+            "type": "object"
         },
         "TargetDataTypesEnum": {
             "description": "",
@@ -271,6 +292,7 @@
             "type": "array"
         },
         "sourceSystem": {
+            "$ref": "#/$defs/SourceSystem",
             "description": "The computer system or database management system that is the source of the information in this file."
         },
         "studyOID": {
