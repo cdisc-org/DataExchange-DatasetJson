@@ -226,7 +226,7 @@
     },
     "$id": "https://cdisc.org/dataset-json/model",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "additionalProperties": true,
+    "additionalProperties": false,
     "description": "",
     "metamodel_version": "1.7.0",
     "properties": {
