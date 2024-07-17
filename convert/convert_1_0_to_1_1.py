@@ -4,10 +4,11 @@ import json
 
 def convert_1_0_to_1_1(old, date_formats = ['yymmdd', 'date', 'e8601da']):
     new = OrderedDict({
-        "creationDateTime": old.get("creationDateTime"),
+        "datasetJSONCreationDateTime": old.get("creationDateTime"),
         "datasetJSONVersion": "1.1.0",
         "fileOID": old.get("fileOID"),
-        "asOfDateTime": old.get("asOfDateTime"),
+        "dbQueryDateTime": old.get("asOfDateTime"),
+        "dbLastModifiedDateTime": None,
         "originator": old.get("originator"),
         "sourceSystem": {},
         "studyOID": None,
