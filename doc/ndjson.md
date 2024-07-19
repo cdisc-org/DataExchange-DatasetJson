@@ -24,13 +24,14 @@ line is valid JSON. The JSON is delimited by the newline character (\n or 0x0A) 
 return character (\r or 0x0D). UTF-8 encoding is expected.
 
 The Dataset-JSON NDJSON format is created from the Dataset-JSON standard by:
-* Row 1. Create 1 JSON object from the dataset attributes. Includes all by the columns and rows attributes.
-* Row 2. Create 1 JSON object that contains an array of variable metadata definitions taken from the columns attribute.
-* Row 3 - n. Create 1 array per data row
+* Row 1. Create 1 JSON object from the metadata, including the dataset attributes and column definitions.
+* Row 2 - n. Create 1 array per data row
+
+All the metadata is in the first row of the dataset and everything else is a data row.
 
 ![NDJSON Proposed Changes](/doc/img/ndjson-json-structure.JPG?raw=true)
 
-Each row can be parsed and processed as standalone JSON text.
+Each row can be parsed and processed as standalone JSON.
 
 ### Examples
 
