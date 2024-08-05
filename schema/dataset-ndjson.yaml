@@ -12,6 +12,7 @@ imports:
 
 classes:
   DatasetMetadata:
+    tree_root: true
     attributes:
       datasetJSONCreationDateTime:
         description: The date/time the Dataset-JSON file was created.
@@ -34,13 +35,14 @@ classes:
         required: false
         range: SourceSystem
       studyOID:
-        description: See ODM definition for study OID (ODM/Study/@OID).
+        description: Unique identifier for the study that may also function as a foreign key to a Study/@OID in Define-XML
       metaDataVersionOID:
         description: See ODM definition for metadata version OID (ODM/Study/MetaDataVersion/@OID).
       metaDataRef:
         description: URL for a metadata file the describing the data.
+        range: uriorcurie
       itemGroupOID:
-        description: Foreign key to ItemGroupDef.OID in Define / MDR
+        description: Unique identifier for the dataset that may also function as a foreign key to an ItemGroupDef/@OID in Define-XML
         required: true
         inverse: implemented_in_dataset
       isReferenceData:
@@ -58,19 +60,6 @@ classes:
       label:
         description: Dataset description
         required: true
-
-  SourceSystem:
-    description: The information system from which the content of this dataset was sourced
-    attributes:
-      name:
-        description: The name of the sourceSystem
-        required: true
-      version:
-        description: The version of the sourceSystem
-        required: true
-
-  ColumnMetadata:
-    attributes:
       columns:
         description: Basic information about variables
         required: true
@@ -80,7 +69,7 @@ classes:
         inlined_as_list: true
 
   RowData:
-    description: Data content list of lists.
+    description: Data content list of lists that is a data row in the dataset
     attributes:
       rows:
         required: false
@@ -96,6 +85,16 @@ classes:
             - range: float
             - range: double
 
+  SourceSystem:
+    description: The information system from which the content of this dataset was sourced
+    attributes:
+      name:
+        description: The name of the sourceSystem
+        required: true
+      version:
+        description: The version of the sourceSystem
+        required: true
+
   Column:
     description: Column-level metadata
     attributes:
@@ -110,12 +109,12 @@ classes:
         required: true
       dataType:
         description: >-
-          Physical type of the variable. Allowed values: "string", "integer", "decimal", "float", "double", "boolean". See ODM types for details.
+          Logical data type of the variable. Allowed values: "string", "integer", "decimal", "float", "double", "boolean". See ODM types for details.
         required: true
         range: DataTypesEnum
       targetDataType:
         description: >-
-          Logical type of the variable if different from physical dataType i.e. "datetime"
+          Indicates the data type into which the receiving system must transform the associated Dataset-JSON variable.
         required: false
         range: TargetDataTypesEnum
       length:
