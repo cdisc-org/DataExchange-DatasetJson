@@ -7,6 +7,8 @@ Key to this are:
 * how to declare and document an extension
 * how to populate the extensions
 
+The [extension](extension.yaml) is a LinkML file with the schema required for extensions.  A collated schema can be generated per the below commands.
+
 ## Constraints
 Similarly to the ODM, constraints are required on the extension schema and intent.
 
@@ -27,3 +29,6 @@ The extended schema can be generated using the following command (following inst
 ```shell
 gen-json-schema examples/extensions/extension.yaml --closed --include-range-class-descendants --mergeimports -i > schema/generated_dataset_extension.schema.json
 ```
+
+## Examples 
+There are a couple of examples in the [extended_dataset](extended_dataset.json) for information.
