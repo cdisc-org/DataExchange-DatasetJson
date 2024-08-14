@@ -1,0 +1,50 @@
+id: https://cdisc.org/dataset-json/model/extensions
+name: dataset-json-extensions
+description: >-
+  Extension Model for Dataset-JSON v1.1
+prefixes:
+  dataset: https://cdisc.org/dataset-json/model/
+  linkml: https://w3id.org/linkml/
+  extensions: https://cdisc.org/dataset-json/model/extensions/
+imports:
+  - linkml:types
+  - ../../schema/dataset
+classes:
+  SourceSystem:
+    attributes:
+      name:
+        description: The name of the sourceSystem
+        comments: This should be inherited from the dataset:SourceSystem class
+        required: true
+      version:
+        description: The version of the sourceSystem
+        comments: This should be inherited from the dataset:SourceSystem class
+        required: true
+      systemExtensions:
+        description: A list of system extensions
+        multivalued: true
+        range: SourceSystemExtensions
+  SourceSystemExtensions:
+    description: Extension to the specification to aid in semantic interoperability between systems, use one per system
+    attributes:
+      namespace:
+        description: The namespace for the extension, expected to be a URI
+        required: true
+      extensions:
+        description: The value of the extension
+        multivalued: true
+        required: true
+        range: SourceSystemExtension
+  SourceSystemExtension:
+    description: Extension to the specification to aid in semantic interoperability between systems
+    attributes:
+      name:
+        description: The name for the extension
+        required: true
+      value:
+        description: The value for the extension
+        required: true
+      definition:
+        description: A human readable description of the extension
+        required: false
+
