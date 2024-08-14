@@ -6,11 +6,14 @@ prefixes:
   dataset: https://cdisc.org/dataset-json/model/
   linkml: https://w3id.org/linkml/
   extensions: https://cdisc.org/dataset-json/model/extensions/
+default_prefix: dataset
+default_range: string
 imports:
   - linkml:types
   - ../../schema/dataset
 classes:
   SourceSystem:
+    description: The information system from which the content of this dataset was sourced
     attributes:
       name:
         description: The name of the sourceSystem
