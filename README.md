@@ -38,4 +38,4 @@ This project is used to manage the JSON representation for Clinical Datasets (a 
 
 - The **examples/big_xpt** folder contains scripts to create a large XPT file (5Gb) from the XPT file **examples/sdtm/lb.xpt**.
 - The **examples/i18n** folder contains an example of a Dataset-JSON file with non-ASCII characters: **examples/i18n/ae.json**.
-- The **examples/extensions** folder contains an example of extnding the Dataset-JSON schema: **examples/extensions/extension.yaml**.
+- The **examples/extensions** folder contains an example of extending the Dataset-JSON schema: **examples/extensions/extension.yaml**.
