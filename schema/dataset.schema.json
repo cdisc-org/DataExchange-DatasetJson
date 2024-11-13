@@ -95,10 +95,6 @@
                     "description": "A unique identifier for this file.",
                     "type": "string"
                 },
-                "isReferenceData": {
-                    "description": "Boolean value that is set to true when the dataset contains reference data (not subject data)",
-                    "type": "boolean"
-                },
                 "itemGroupOID": {
                     "description": "Foreign key to ItemGroupDef.OID in Define / MDR",
                     "type": "string"
@@ -250,10 +246,6 @@
         "fileOID": {
             "description": "A unique identifier for this file.",
             "type": "string"
-        },
-        "isReferenceData": {
-            "description": "Boolean value that is set to true when the dataset contains reference data (not subject data)",
-            "type": "boolean"
         },
         "itemGroupOID": {
             "description": "Foreign key to ItemGroupDef.OID in Define / MDR",

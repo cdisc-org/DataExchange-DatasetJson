@@ -46,10 +46,6 @@ classes:
         description: Foreign key to ItemGroupDef.OID in Define / MDR
         required: true
         inverse: implemented_in_dataset
-      isReferenceData:
-        description: Boolean value that is set to true when the dataset contains reference data (not subject data)
-        range: boolean
-        ifabsent: false
       records:
         description: The total number of records in a dataset
         required: true

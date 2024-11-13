@@ -45,10 +45,6 @@ classes:
         description: Unique identifier for the dataset that may also function as a foreign key to an ItemGroupDef/@OID in Define-XML
         required: true
         inverse: implemented_in_dataset
-      isReferenceData:
-        description: Boolean value that is set to true when the dataset contains reference data (not subject data)
-        range: boolean
-        ifabsent: false
       records:
         description: The total number of records in a dataset
         required: true
