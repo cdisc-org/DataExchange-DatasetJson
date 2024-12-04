@@ -4,10 +4,10 @@ This repository contains the schema, specification, and examples of the Dataset-
 
 ## Dataset-JSON Specification
 
-The [doc](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/main/doc) folder contains the specification of the JSON and NDJSON specification of Dataset-JSON.
+The [doc](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/doc) folder contains the specification of the JSON and NDJSON specification of Dataset-JSON.
 ## Dataset-JSON Specification
 
-The [schema](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/main/schema) folder contains the LinkML and JSON schema for the JSON and NDJSON specification of Dataset-JSON.
+The [schema](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/schema) folder contains the LinkML and JSON schema for the JSON and NDJSON specification of Dataset-JSON.
 
 ## Example Data
 
