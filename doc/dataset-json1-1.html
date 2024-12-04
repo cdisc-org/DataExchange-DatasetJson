@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Dataset-JSON v1.1</title>
+  <title>CDISC Dataset-JSON v1.1 Specification</title>
   <style>
       body{
         width: 95%;
@@ -21,7 +21,7 @@
       }
 
       h2{
-        font-size: 1.3em;
+        font-size: 1.4em;
         margin-left: 0;
         font-weight: bolder;
         text-align: left;
@@ -29,7 +29,7 @@
       }
 
       h3{
-        font-size: 1.0em;
+        font-size: 1.2em;
         margin-left: 0;
         font-weight: bolder;
         text-align: left;
@@ -53,7 +53,7 @@
       table col.first{
           background-color: #f4f5f7;
       }
-      
+
       table tr{
         border: 1px solid #000000;
       }
@@ -67,7 +67,7 @@
         font-size: 1.0em;
         background-color: #f4f5f7;
       }
-      
+
       table td{
         vertical-align: top;
         padding: 5px;
@@ -81,23 +81,16 @@
         font-size: 1.0em;
         line-height: 120%;
         vertical-align: top;
-        white-space: pre; /* CSS 2.0 */
-        white-space: pre-wrap; /* CSS 2.1 */
-         /* CSS 3.0 */
-        white-space: -pre-wrap; /* Opera 4-6 */
-        white-space: -o-pre-wrap; /* Opera 7 */
-        white-space: -moz-pre-wrap; /* Mozilla */
-        white-space: -hp-pre-wrap; /* HP Printers */
-        word-wrap: break-word; /* IE 5+ */
+        white-space: pre-wrap;
       }
-  </style>  
+  </style>
 </head>
 <body>
   <table title="Version information">
     <colgroup>
       <col class="first">
       <col>
-    </colgroup>    
+    </colgroup>
     <tbody>
       <tr>
         <th>Title</th>
@@ -141,9 +134,27 @@
       </tr>
     </tbody>
   </table>
-  
-  <h2>Introduction</h2>
-  
+
+  <ul>
+    <li><a href="#DatasetJSON1.1-Introduction">Introduction</a></li>
+    <li><a href="#DatasetJSON1.1-Top-levelMetadataAttributes">Top-level Metadata Attributes</a></li>
+    <li><a href="#DatasetJSON1.1-ColumnMetadata">Column Metadata</a></li>
+    <li>
+      <ul>
+        <li><a href="#DatasetJSON1.1-SupportedColumnDataTypeCombinations">Supported Column Data Type Combinations</a></li>
+        <li><a href="#DatasetJSON1.1-DateTimeVariables">Date/Time Variables</a></li>
+        <li><a href="#DatasetJSON1.1-DecimalVariables">Decimal Variables</a></li>
+      </ul>
+    </li>
+    <li><a href="#DatasetJSON1.1-RowData">Row Data</a></li>
+    <li><a href="#DatasetJSON1.1-AFullExampleofaDataset-JSONFile">A Full Example of a Dataset-JSON File</a></li>
+    <li><a href="#DatasetJSON1.1-NDJSONRepresentationofDataset-JSON">NDJSON Representation of Dataset-JSON</a></li>
+    <li><a href="#DatasetJSON1.1-AFullExampleofanNDJSONDataset-JSONFile">A Full Example of an NDJSON Dataset-JSON File</a></li>
+    <li><a href="#DatasetJSON1.1-GlossaryandAbbreviations">Glossary and Abbreviations</a></li>
+  </ul>
+
+  <h2 id="DatasetJSON1.1-Introduction">Introduction</h2>
+
   <p>Dataset-JSON is a data exchange standard for sharing tabular data
   using JSON. It is designed to meet a wide range of data exchange scenarios,
   including regulatory submissions and API-based data exchange. Each
@@ -170,9 +181,9 @@
   "https://github.com/cdisc-org/DataExchange-DatasetJson">GitHub repository</a>
   for the Dataset-JSON Version 1.1 standard.</p>
   <p>The specification and user's guide are for both clinical and non-clinical research data.</p>
-  
-  <h2>Top-level Metadata Attributes</h2>
-  
+
+  <h2 id="DatasetJSON1.1-Top-levelMetadataAttributes">Top-level Metadata Attributes</h2>
+
   <p>The following table summarizes the technical and dataset
   attributes at the top level of the Dataset-JSON object.</p>
   <table title="Top-level Metadata Attributes">
@@ -275,7 +286,7 @@
         <td>string</td>
         <td></td>
         <td>"minLength": 1</td>
-        <td>Optiona</td>
+        <td>Optional</td>
         <td>Unique identifier for the
             study that may also function as a foreign key to a Study/@OID in an
             associated Define-XML document, or to any studyOID references that are used as
@@ -373,14 +384,14 @@
       </tr>
     </tbody>
   </table>
-  
+
   <p>The following example illustrates the basic Dataset-JSON structure.</p>
-  
+
   <table title="Basic Dataset-JSON structure">
     <tr>
       <td class="code">
 {
-    "datasetJSONCreationDateTime": "2023-03-22T11:53:27",      
+    "datasetJSONCreationDateTime": "2023-03-22T11:53:27",
     "datasetJSONVersion": "1.1.0",
     "fileOID": "www.sponsor.xyz.org.project123.final",
     "dbLastModifiedDateTime": "2023-02-15T10:23:15",
@@ -402,13 +413,13 @@
       </td>
     </tr>
   </table>
-  
-  <h2>Column Metadata</h2>
-  
+
+  <h2 id="DatasetJSON1.1-ColumnMetadata">Column Metadata</h2>
+
   <p><strong>columns</strong> is an array of basic information about dataset
   variables. The order of the elements in the array must be the same as the
   order of variables in the described dataset.</p>
-  
+
   <table title="Column metadata">
     <tbody>
       <tr>
@@ -531,13 +542,13 @@
       </tr>
     </tbody>
   </table>
-  
+
   <p>The following example shows the columns metadata structure.</p>
-  
+
   <table title="Columns metadata structure">
     <tr>
       <td class="code">
-"columns": [    
+"columns": [
     {
         "itemOID": "IT.DM.STUDYID",
         "name": "STUDYID",
@@ -547,26 +558,26 @@
         "keySequence": 1,
     },
     {
-        "itemOID": "IT.DM.DOMAIN", 
-        "name": "DOMAIN", 
-        "label": "Domain Abbreviation", 
-        "dataType": "string", 
+        "itemOID": "IT.DM.DOMAIN",
+        "name": "DOMAIN",
+        "label": "Domain Abbreviation",
+        "dataType": "string",
         "length": 2
     },
     ...
-]    
+]
       </td>
     </tr>
   </table>
-  
-  <h3>Supported Column Data Type Combinations</h3>
-  
+
+  <h3 id="DatasetJSON1.1-SupportedColumnDataTypeCombinations">Supported Column Data Type Combinations</h3>
+
   <p>The JSON data type mentioned in the "Supported Column
   Data Type Combinations" table is the data type of the actual data in the
   "rows" arrays in the Dataset-JSON file. This JSON data type is defined by the
   Dataset-JSON Schema, but only includes "string", "integer", "boolean",
   number", and null. It does not include "array" or "object".</p>
-  
+
   <table title="Supported Column Data Type Combinations">
     <tbody>
       <tr>
@@ -655,9 +666,9 @@
       </tr>
     </tbody>
   </table>
-  
-  <h3>Date/Time Variables</h3>
-  
+
+  <h3 id="DatasetJSON1.1-DateTimeVariables">Date/Time Variables</h3>
+
   <p>Timing variables (datetime, date, time) are stored as ISO 8601 strings in
   the JSON format. The targetDataType attribute needs to be specified when
   different from dataType attribute or the JSON data type.</p>
@@ -667,7 +678,7 @@
   needed to a string in JSON format. The targetDataType for the date and
   datetime variables does not need to be mentioned for SDTM datasets as the
   logical type is the same as the JSON data type.</p>
-  
+
   <table title="Date/Time variables for SDTM">
     <tbody>
       <tr>
@@ -680,7 +691,7 @@
     {"itemOID": "IT.AE.AESTDTC", "name": "AESTDTC", "label": "Start Date/Time of Adverse Event", "dataType": "date", "keySequence": 4},
     {"itemOID": "IT.AE.AEENDTC", "name": "AEENDTC", "label": "End Date/Time of Adverse Event", "dataType": "date"},
     ...
-]    
+]
 "rows": [
     ["CDISCPILOT01", "AE", "CDISC001", ..., "2012-12-02", "2013-05-20", ...]
 ]
@@ -688,13 +699,13 @@
       </tr>
     </tbody>
   </table>
-  
+
   <p>For ADaM datasets, the targetDataType must be set to integer. Consider the
   following example of ADAE data. The targetDataType attribute is mentioned, as
   the logical data type is different from the JSON data type. Also note that
   the displayFormat attribute has been specified as "E8601DA" so that SAS can
   display these numeric values in a user-friendly way.</p>
-  
+
   <table title="Date/Time variables for ADaM">
     <tbody>
       <tr>
@@ -717,18 +728,18 @@
       </tr>
     </tbody>
   </table>
-  
-  <h3>Decimal Variables</h3>
-  
+
+  <h3 id="DatasetJSON1.1-DecimalVariables">Decimal Variables</h3>
+
   <p>Some decimal variables can be exchanged as a string in JSON to represent terminating decimal fractions
   without rounding. Hence, the targetDataType is "decimal" and JSON data type is "string".</p>
   <p>For example:</p>
-  
+
   <table title="Decimal Variables">
     <tbody>
       <tr>
         <td class="code">
-"columns": [ ...  
+"columns": [ ...
     {"itemOID": "IT.ADSL.BMIBL", "name": "BMIBL", "label": "Baseline BMI (kg/m^2)", "dataType": "decimal", "targetDataType": "decimal", "length": 16},
     {"itemOID": "IT.ADSL.HEIGHTBL", "name": "HEIGHTBL", "label": "Baseline Height (cm)", "dataType": "decimal", "targetDataType": "decimal", "length": 5},
     ...
@@ -742,12 +753,12 @@
       </tr>
     </tbody>
   </table>
-  
-  <h2>Row Data</h2>
-  
+
+  <h2 id="DatasetJSON1.1-RowData">Row Data</h2>
+
   <p><strong>rows</strong> is an array of records with variables values. Each
   record itself is also represented as an array of variables values.</p>
-  
+
   <table title="Row data">
     <tr>
       <td class="code">
@@ -770,7 +781,7 @@
   </table>
   <p>Missing values are represented by null. Empty strings are represented by "".</p>
   <p>Example:</p>
-  
+
   <table title="Missing data">
     <tr>
       <td class="code">
@@ -791,9 +802,9 @@
       </td>
     </tr>
   </table>
-  
-  <h2>A Full Example of a Dataset-JSON File</h2>
-  
+
+  <h2 id="DatasetJSON1.1-AFullExampleofaDataset-JSONFile">A Full Example of a Dataset-JSON File</h2>
+
   <table title="A Full Example of a Dataset-JSON File">
     <tr>
       <td class="code">
@@ -833,9 +844,9 @@
       </td>
     </tr>
   </table>
-  
-  <h2>NDJSON Representation of Dataset-JSON</h2>
-  
+
+  <h2 id="DatasetJSON1.1-NDJSONRepresentationofDataset-JSON">NDJSON Representation of Dataset-JSON</h2>
+
   <p>The purpose of the NDJSON, or new-line delimited JSON, representation of
   Dataset-JSON is to simplify streaming large datasets. With NDJSON, a dataset
   can easily be read or written one row at a time without loading the entire
@@ -853,9 +864,9 @@
     dataset attributes and column definitions.</li>
     <li>Row 2-n. Create 1 JSON array per data row</li>
   </ul>
-  
-  <h2>A Full Example of an NDJSON Dataset-JSON File</h2>
-  
+
+  <h2 id="DatasetJSON1.1-AFullExampleofanNDJSONDataset-JSONFile">A Full Example of an NDJSON Dataset-JSON File</h2>
+
   <table title="A Full Example of an NDJSON Dataset-JSON File">
     <tr>
       <td class="code">
@@ -869,9 +880,9 @@
   </table>
   <p>Each row in an NDJSON file can be parsed and processed as stand-alone
   JSON.</p>
-  
-  <h2>Glossary and Abbreviations</h2>
-  
+
+  <h2 id="DatasetJSON1.1-GlossaryandAbbreviations">Glossary and Abbreviations</h2>
+
   <table title="Glossary and Abbreviations">
     <tbody>
       <tr>
