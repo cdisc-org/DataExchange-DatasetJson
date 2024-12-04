@@ -61,7 +61,7 @@
 - [A Full Example of an NDJSON Dataset-JSON File](#afullexampleofanndjsondatasetjsonfile)
 - [Glossary and Abbreviations](#glossaryandabbreviations)
 
-## <a id="introduction">Introduction
+## <a id="introduction"></a>Introduction
 
 Dataset-JSON is a data exchange standard for sharing tabular data using JSON. It is designed to meet a wide range of data exchange scenarios, including regulatory submissions and API-based data exchange. Each Dataset-JSON dataset can optionally reference a Define-XML document containing more complete metadata for the dataset. One aim of Dataset-JSON is to address as many of the relevant requirements in the PHUSE 2017 [Transport for the Next Generation](https://www.cdisc.org/sites/default/files/2023-05/Transport-for-the-Next-Generation-Version-1.0.pdf) paper as possible, including the efficient use of storage space.
 
@@ -77,7 +77,7 @@ The LinkML model representation, the JSON schema, both for JSON and NDJSON repre
 
 The specification and user's guide are for both clinical and non-clinical research data.
 
-## <a id="toplevelmetadataattributes">Top-level Metadata Attributes
+## <a id="toplevelmetadataattributes"></a>Top-level Metadata Attributes
 
  The following table summarizes the technical and dataset attributes at the top level of the Dataset-JSON object.
 
@@ -305,7 +305,7 @@ The specification and user's guide are for both clinical and non-clinical resear
   }
 ```  
 
-## <a id="columnmetadata">Column Metadata
+## <a id="columnmetadata"></a>Column Metadata
 
 **columns** is an array of basic information about dataset variables. The order of the elements in the array must be the same as the order of variables in the described dataset.
 
@@ -455,7 +455,7 @@ The specification and user's guide are for both clinical and non-clinical resear
 ]
 ```
 
-### <a id="supportedcolumndatatypecombinations">Supported Column Data Type Combinations
+### <a id="supportedcolumndatatypecombinations"></a>Supported Column Data Type Combinations
 
 The JSON data type mentioned in the "Supported Column Data Type Combinations" table is the data type of the actual data in the "rows" arrays in the Dataset-JSON file. This JSON data type is defined by the Dataset-JSON Schema, but only includes "string", "integer", "boolean", number", and null. It does not include "array" or "object".
 
@@ -548,7 +548,7 @@ The JSON data type mentioned in the "Supported Column Data Type Combinations" ta
   </tbody>
 </table>
 
-### <a id="datetimevariables">Date/Time Variables
+### <a id="datetimevariables"></a>Date/Time Variables
 
 Timing variables (datetime, date, time) are stored as ISO 8601 strings in the JSON format. The targetDataType attribute needs to be specified when different from dataType attribute or the JSON data type.
 
@@ -588,7 +588,7 @@ For ADaM datasets, the targetDataType must be set to integer. Consider the follo
 ]
 ```
 
-### <a id="decimalvariables">Decimal Variables
+### <a id="decimalvariables"></a>Decimal Variables
 
 Some decimal variables can be exchanged as a string in JSON to represent terminating decimal fractions without rounding. Hence, the targetDataType is "decimal" and JSON data type is "string".
 
@@ -607,7 +607,7 @@ For example:
 ]
 ```
 
-## <a id="rowdata">Row Data
+## <a id="rowdata"></a>Row Data
 
 **rows**</strong>** is an array of records with variables values. Each record itself is also represented as an array of variables values.
 
@@ -649,7 +649,7 @@ Example:
 ]
 ```
 
-## <a id="afullexampleofadatasetjsonfile">A Full Example of a Dataset-JSON File
+## <a id="afullexampleofadatasetjsonfile"></a>A Full Example of a Dataset-JSON File
 
 ```json
 {
@@ -687,7 +687,7 @@ Example:
 }
 ```
 
-## <a id="ndjsonrepresentationofdatasetjson">NDJSON Representation of Dataset-JSON
+## <a id="ndjsonrepresentationofdatasetjson"></a>NDJSON Representation of Dataset-JSON
 
 The purpose of the NDJSON, or new-line delimited JSON, representation of Dataset-JSON is to simplify streaming large datasets. With NDJSON, a dataset can easily be read or written one row at a time without loading the entire dataset into memory. The NDJSON and JSON dataset content are the same. In a data-exchange scenario, the sender and receiver determine whether to use the JSON or the NDJSON representation of Dataset-JSON.
 
@@ -698,7 +698,7 @@ The Dataset-JSON NDJSON format is created from the Dataset-JSON standard by:
 * Row 1. Create 1 JSON object that contains the metadata, including the dataset attributes and column definitions.
 * Row 2-n. Create 1 JSON array per data row
 
-## <a id="afullexampleofanndjsondatasetjsonfile">A Full Example of an NDJSON Dataset-JSON File
+## <a id="afullexampleofanndjsondatasetjsonfile"></a>A Full Example of an NDJSON Dataset-JSON File
 
 ```json
 {"datasetJSONCreationDateTime": "2023-06-28T15:38:43", "datasetJSONVersion": "1.1.0", "fileOID": "www.sponsor.xyz.org.project123.final", "dbLastModifiedDateTime": "2023-05-31T00:00:00", "originator": "Sponsor XYZ", "sourceSystem": {"name": "Software ABC", "version": "1.0.0"}, "studyOID": "cdisc.com.CDISCPILOT01", "metaDataVersionOID": "MDV.MSGv2.0.SDTMIG.3.3.SDTM.1.7", "metaDataRef": "https://metadata.location.org/CDISCPILOT01/define.xml", "itemGroupOID": "IG.DM", "records": 18, "name": "DM", "label": "Demographics", "columns": [{"itemOID": "IT.DM.STUDYID", "name": "STUDYID", "label": "Study Identifier", "dataType": "string", "length": 12, "keySequence": 1}, {"itemOID": "IT.DM.DOMAIN", "name": "DOMAIN", "label": "Domain Abbreviation", "dataType": "string", "length": 2},  {"itemOID": "IT.DM.USUBJID", "name": "USUBJID", "label": "Unique Subject Identifier", "dataType": "string", "length": 8, "keySequence": 2}, ..., {"itemOID": "IT.DM.AGE", "name": "AGE", "label": "Age", "dataType": "integer"}, {"itemOID": "IT.DM.AGEU", "name": "AGEU", "label": "Age Units", "dataType": "string", "length": 5}, ...]}
@@ -710,7 +710,7 @@ The Dataset-JSON NDJSON format is created from the Dataset-JSON standard by:
 
 Each row in an NDJSON file can be parsed and processed as stand-alone JSON.
 
-## <a id="glossaryandabbreviations">Glossary and Abbreviations
+## <a id="glossaryandabbreviations"></a>Glossary and Abbreviations
 
 <table title="Glossary and Abbreviations">
   <tbody>
