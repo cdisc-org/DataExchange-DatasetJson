@@ -391,7 +391,7 @@ The specification and user's guide are for both clinical and non-clinical resear
           different from the dataType attribute or the JSON data type and
           the data needs to be transformed by the receiving system.
           See the Supported Column Data Type Combinations table for details
-          on usage. See the <a href="https://wiki.cdisc.org/display/PUB/User%27s+Guide">User's Guide</a> for additional
+          on usage. See the <a href="https://wiki.cdisc.org/display/PUB/Dataset-JSON+v1.1+User%27s+Guide">User's Guide</a> for additional
           information.
       </td>
     </tr>
