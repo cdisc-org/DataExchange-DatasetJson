@@ -69,7 +69,7 @@ Dataset-JSON uses lowerCamelCase notation for attribute names.
 
 The JSON standard does not allow specifying or controlling the order of attributes. However, since most JSON encoders and decoders allow control over attribute order, it is strongly recommended to follow the attribute order documented in this specification. Due to the potentially large size of Dataset-JSON datasets, adhering to the specified attribute order allows software using streaming approaches to read the file more efficiently and quickly.
 
-Dataset-JSON must contain only 1 dataset per file. Dataset-JON uses the file extension .json.
+Dataset-JSON must contain only 1 dataset per file. Dataset-JSON uses the file extension .json.
 
 Although adapted from the [Dataset-XML Version 1.0 specification](https://www.cdisc.org/standards/foundational/dataset-xml/dataset-xml-v10), Dataset-JSON uses the JSON format and includes many enhancements.
 
