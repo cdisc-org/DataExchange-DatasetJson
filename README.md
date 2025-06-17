@@ -10,6 +10,7 @@ The [doc](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/publish_v11
 
 - [Dataset-JSON v1.1](doc/dataset-json1-1.html).
 - The [NDJSON](doc/dataset-json-ndjson1-1.html) representation of Dataset-JSON v1.1
+- [Compressed Dataset-JSON v1.1](doc/compressed-dataset-json-1-1.html)
 
 ## Dataset-JSON Schema
 
