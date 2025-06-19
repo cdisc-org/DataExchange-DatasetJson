@@ -8,9 +8,9 @@ The Dataset-JSON v1.1 release can be downloaded as a [zip](https://github.com/cd
 
 The [doc](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/doc) folder contains the specifications of:
 
-- [Dataset-JSON v1.1](https://github.com/cdisc-org/DataExchange-DatasetJson/blob/master/doc/dataset-json1-1.md).
-- The [NDJSON](https://github.com/cdisc-org/DataExchange-DatasetJson/blob/master/doc/dataset-json-ndjson1-1.md) representation of Dataset-JSON v1.1
-- [Compressed Dataset-JSON v1.1](https://github.com/cdisc-org/DataExchange-DatasetJson/blob/master/doc/compressed-dataset-json1-1.md)
+- [Dataset-JSON v1.1](doc/dataset-json1-1.md).
+- The [NDJSON](doc/dataset-json-ndjson1-1.md) representation of Dataset-JSON v1.1
+- [Compressed Dataset-JSON v1.1](doc/compressed-dataset-json1-1.md)
 
 ## Dataset-JSON Schema
 

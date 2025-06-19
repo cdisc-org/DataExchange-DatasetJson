@@ -33,6 +33,11 @@
               <th>Summary of Changes</th>
             </tr>
             <tr>
+              <td>2025-06-19</td>
+              <td>1.1</td>
+              <td>Final</td>
+            </tr>
+            <tr>
               <td>2025-03-18</td>
               <td>1.1</td>
               <td>Draft</td>
@@ -182,5 +187,5 @@ A conforming implementation must:
 
 1. Correctly compress Dataset-NDJSON content using the zLib compression algorithm
 2. Successfully decompress DSJC files and interpret the content as Dataset-NDJSON
-3. Handle errors gracefully as specified in section 8.3
+3. Handle errors gracefully as specified in section [Error Handling](#errorhandling).
 4. Preserve all semantic information from the original Dataset-JSON content
