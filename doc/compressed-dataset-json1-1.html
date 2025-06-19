@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CDISC Compressed Dataset-JSON v1.1 Specification</title>
+  <style>
+      body{
+        width: 95%;
+        background-color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 75%;
+        margin: 0;
+        padding: 30px;
+      }
+
+      h1{
+        font-size: 1.6em;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: left;
+        color: #696969;
+      }
+
+      h2{
+        font-size: 1.4em;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: left;
+        color: #696969;
+      }
+
+      h3{
+        font-size: 1.2em;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: left;
+        color: #696969;
+      }
+
+      p{
+        width: 95%;
+      }
+
+      table{
+        border-spacing: 4px;
+        border: 1px solid #000000;
+        background-color: #FFFFFF;
+        margin-top: 5px;
+        padding: 5px;
+        border-collapse: collapse;
+        empty-cells: show;
+      }
+
+      table col.first{
+          background-color: #f4f5f7;
+      }
+
+      table tr{
+        border: 1px solid #000000;
+      }
+
+      table th{
+        font-weight: bold;
+        vertical-align: top;
+        text-align: left;
+        padding: 5px;
+        border: 1px solid #000000;
+        font-size: 1.0em;
+        background-color: #f4f5f7;
+      }
+
+      table td{
+        vertical-align: top;
+        padding: 5px;
+        border: 1px solid #000000;
+        font-size: 1em;
+        line-height: 130%;
+      }
+
+      table td.code{
+        font-family: "Courier New";
+        font-size: 1.0em;
+        line-height: 120%;
+        vertical-align: top;
+        white-space: pre-wrap;
+      }
+  </style>
+</head>
+<body>
+  <h1>CDISC Compressed Dataset-JSON v1.1 Specification (DSJC)</h1>
+  <table title="Version information">
+    <colgroup>
+      <col class="first">
+      <col>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>Title</th>
+        <td>CDISC Compressed Dataset-JSON Specification</td>
+      </tr>
+      <tr>
+        <th>Version</th>
+        <td>1.1</td>
+      </tr>
+      <tr>
+        <th>Prepared by</th>
+        <td>CDISC Data Exchange Standards Team</td>
+      </tr>
+      <tr>
+        <th>Notes to Readers</th>
+        <td>This is the specification for Version 1.0 of CDISC Compressed
+        Dataset-JSON.</td>
+      </tr>
+      <tr>
+        <th colspan="1">Revision History</th>
+        <td colspan="1">
+          <table title="Revision history">
+            <tbody>
+              <tr>
+                <th>Date</th>
+                <th>Version</th>
+                <th>Summary of Changes</th>
+              </tr>
+              <tr>
+                <td>2025-06-19</td>
+                <td>1.1</td>
+                <td>Final</td>
+              </tr>
+              <tr>
+                <td>2025-03-18</td>
+                <td>1.1</td>
+                <td>Draft</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#formatdefinition">Format Definition</a></li>
+    <li><a href="#baseformat">Base Format: Dataset-NDJSON</a></li>
+    <li><a href="#compression">Compression</a></li>
+    <li><a href="#fileformat">File Format</a></li>
+    <li><a href="#fileextensionandmimetype">File Extension and MIME Type</a></li>
+    <li><a href="#processingoverview">Processing Overview</a>
+      <ul>
+        <li><a href="#creatingdsjc">Creating a DSJC File</a></li>
+        <li><a href="#readingdsjc">Reading a DSJC File</a></li>
+      </ul>
+    </li>
+    <li><a href="#implementation">Implementation Considerations</a>
+      <ul>
+        <li><a href="#memoryefficiency">Memory Efficiency</a></li>
+        <li><a href="#compressionlevelselection">Compression Level Selection</a></li>
+        <li><a href="#errorhandling">Error Handling</a></li>
+        <li><a href="#compatibility">Compatibility</a></li>
+      </ul>
+    </li>
+    <li><a href="#benefits">Benefits</a></li>
+    <li><a href="#limitations">Limitations</a></li>
+    <li><a href="#conformance">Conformance</a></li>
+  </ul>
+
+  <h2 id="introduction">Introduction</h2>
+
+  <p>The DSJC (Dataset-JSON Compressed) format is a standardized method for
+  compressing Dataset-JSON content. It specifically uses the Dataset-NDJSON
+  format as the base structure and applies zLib compression to create a more
+  compact representation of the data. This specification describes the DSJC
+  format in a language-neutral manner to ensure interoperability across
+  different platforms and programming environments.</p>
+
+  <h2 id="formatdefinition">Format Definition</h2>
+  <p>DSJC is defined as a direct zLib compression stream of Dataset-NDJSON
+  format content without additional headers, signatures, or metadata beyond
+  what the zLib format itself provides.</p>
+
+  <h2 id="baseformat">Base Format: Dataset-NDJSON</h2>
+  <p>The Dataset-NDJSON format serves as the base format for DSJC as it
+  provides better streaming capabilities. It consists of:</p>
+  <ol>
+    <li><strong>First Line</strong>: A JSON object containing Dataset-JSON
+    metadata (without the rows property)</li>
+    <li><strong>Subsequent Lines</strong>: Each line is a valid JSON array or
+    object representing a single data record</li>
+  </ol>
+  <p>Usage of whitespace characters should be reduced to a minimum required by
+  the Dataset-NDJSON format. Avoid spaces between JSON array elements or
+  attribute definitions.</p>
+  <p>Example of Dataset-NDJSON before compression:</p>
+
+
+  <table title="Basic Dataset-JSON example before compression">
+  <tr>
+    <td class="code">{"datasetJSONCreationDateTime":"2023-01-01T12:00:00","datasetJSONVersion":"1.1","records":3,"name":"ADSL","label":"Subject Level Analysis Dataset","columns":[...]}
+["SUBJ001",45,"M"]
+["SUBJ002",52,"F"]
+["SUBJ003",38,"M"]</td>
+  </tr>
+</table>
+
+  <h2 id="compression">Compression</h2>
+
+  <p>DSJC applies standard zLib compression to the entire Dataset-NDJSON
+  content:</p>
+  <ol>
+    <li><strong>Compression Algorithm</strong>: zLib (DEFLATE)</li>
+    <li><strong>Compression Level</strong>: Implementers may choose an
+    appropriate compression level, with 9 (maximum compression) recommended for
+    storage-optimized scenarios and lower levels for performance-sensitive
+    applications</li>
+    <li><strong>Window Size</strong>: 15 bits (32 KB window) is
+    recommended</li>
+    <li><strong>Strategy</strong>: Default compression strategy is
+    recommended</li>
+  </ol>
+
+  <h2 id="fileformat">File Format</h2>
+
+  <p>A DSJC file consists solely of the zLib-compressed byte stream without any
+  additional headers, signatures, or metadata wrapping. The zLib format itself
+  contains sufficient information for decompressors to reconstruct the original
+  Dataset-NDJSON content.</p>
+
+  <h2 id="fileextensionandmimetype">File Extension and MIME Type</h2>
+
+  <p>Files following this specification should use the .dsjc file extension.
+  The recommended MIME type is:</p>
+
+  <table title="Compressed Dataset-JSON MIME Type">
+  <tr>
+    <td class="code">application/vnd.cdisc.dataset-json.compressed</td>
+  </tr>
+</table>
+
+  <h2 id="processingoverview">Processing Overview</h2>
+
+  <h3 id="creatingdsjc">Creating a DSJC File</h3>
+
+  <p>The process to create a DSJC file consists of:</p>
+  <ol>
+    <li>Construct a Dataset-NDJSON format representation of the data:
+      <ul>
+        <li>First line contains dataset metadata as a JSON object</li>
+        <li>Each subsequent line contains a single record as a JSON array or
+        object</li>
+      </ul>
+    </li>
+    <li>Apply zLib compression to the entire Dataset-NDJSON content</li>
+    <li>Write the compressed byte stream to a file</li>
+  </ol>
+
+  <h3 id="readingdsjc">Reading a DSJC File</h3>
+
+  <p>The process to read a DSJC file consists of:</p>
+  <ol>
+    <li>Open the file and apply zLib decompression to the content</li>
+    <li>Process the decompressed content as Dataset-NDJSON:
+      <ul>
+        <li>First line: Parse as JSON object to extract metadata</li>
+        <li>Subsequent lines: Parse each line as a JSON array or object
+        representing a data record</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2 id="implementation">Implementation Considerations</h2>
+
+  <h3 id="memoryefficiency">Memory Efficiency</h3>
+
+  <p>When processing large datasets, implementers should consider streaming
+  approaches for both compression and decompression to avoid loading the entire
+  dataset into memory.</p>
+
+  <h3 id="compressionlevelselection">Compression Level Selection</h3>
+
+  <p>Implementers may choose different compression levels based on their
+  specific use case. As main purpose of the Dataset-JSON format is data
+  exchange, the maximum compression level (9) is recommended by default.</p>
+  <ul>
+    <li>Level 1-3: Faster compression, lower compression ratio</li>
+    <li>Level 4-6: Balanced compression speed and ratio</li>
+    <li>Level 7-9: Higher compression ratio, slower compression</li>
+  </ul>
+
+  <h3 id="errorhandling">Error Handling</h3>
+
+  <p>Implementations should gracefully handle the following error cases:</p>
+  <ul>
+    <li>Invalid or corrupt zLib compressed data</li>
+    <li>Malformed JSON in the decompressed content</li>
+    <li>Inconsistency between metadata and actual data records</li>
+  </ul>
+
+  <h3 id="compatibility">Compatibility</h3>
+
+  <p>To ensure maximum compatibility, implementations should:</p>
+  <ul>
+    <li>Use standard zLib libraries available on most platforms</li>
+    <li>Follow the Dataset-NDJSON format strictly, with proper line
+    delimiters</li>
+    <li>Ensure proper handling of character encodings (UTF-8 recommended)</li>
+  </ul>
+
+  <h2 id="benefits">Benefits</h2>
+
+  <p>The DSJC format offers several benefits:</p>
+  <ol>
+    <li>Reduced Size: Significant reduction in file size compared to
+    uncompressed Dataset-JSON</li>
+    <li>Simplified Implementation: Leverages widely available zLib libraries,
+    available in SAS, R, Python, and other languages</li>
+    <li>Streaming Support: Enables record-by-record processing without
+    decompressing or loading the entire dataset</li>
+    <li>Platform Independence: Works consistently across different operating
+    systems and programming languages</li>
+  </ol>
+
+  <h2 id="limitations">Limitations</h2>
+
+  <p>Implementers should be aware of the following limitations:</p>
+  <ol>
+    <li>Processing Overhead: Compression and decompression require additional
+    CPU resources</li>
+    <li>Random Access: DSJC doesn't provide direct random access to specific
+    records without decompressing the preceding content</li>
+  </ol>
+
+  <h2 id="conformance">Conformance</h2>
+
+  <p>A conforming implementation must:</p>
+  <ol>
+    <li>Correctly compress Dataset-NDJSON content using the zLib compression
+    algorithm</li>
+    <li>Successfully decompress DSJC files and interpret the content as
+    Dataset-NDJSON</li>
+    <li>Handle errors gracefully as specified in section <a href="#errorhandling">Error Handling</a></li>
+    <li>Preserve all semantic information from the original Dataset-JSON
+    content</li>
+  </ol>
+
+</body>
+</html>

@@ -6,18 +6,19 @@ The Dataset-JSON v1.1 release can be downloaded as a [zip](https://github.com/cd
 
 ## Dataset-JSON Specification
 
-The [doc](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/publish_v11/doc) folder contains the specifications of:
+The [doc](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/doc) folder contains the specifications of:
 
-- [Dataset-JSON v1.1](doc/dataset-json1-1.html).
-- The [NDJSON](doc/dataset-json-ndjson1-1.html) representation of Dataset-JSON v1.1
+- [Dataset-JSON v1.1](doc/dataset-json1-1.md).
+- The [NDJSON](doc/dataset-json-ndjson1-1.md) representation of Dataset-JSON v1.1
+- [Compressed Dataset-JSON v1.1](doc/compressed-dataset-json1-1.md)
 
 ## Dataset-JSON Schema
 
-The [schema](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/publish_v11/schema) folder contains the LinkML and JSON schemas for the JSON and NDJSON specification of Dataset-JSON.
+The [schema](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/schema) folder contains the LinkML and JSON schemas for the JSON and NDJSON specification of Dataset-JSON.
 
 ## Example Data
 
-The [examples](examples/README.md) folder contains the following examples:
+The [examples](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/examples) folder contains the following examples:
 
 - The **examples/adam** folder contains Dataset-JSON JSON and NDJSON examples of ADaM data
 - The **examples/sdtm** folder contains Dataset-JSON JSON and NDJSON examples of SDTM data
