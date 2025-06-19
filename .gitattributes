@@ -1,0 +1,4 @@
+# Compressed Dataset-JSON files
+*.dsjc binary
+# SAS Version 5 Transport files
+*.xpt binary

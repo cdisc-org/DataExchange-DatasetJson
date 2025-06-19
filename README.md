@@ -20,9 +20,9 @@ The [schema](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/s
 
 The [examples](https://github.com/cdisc-org/DataExchange-DatasetJson/tree/master/examples) folder contains the following examples:
 
-- The **examples/adam** folder contains Dataset-JSON JSON and NDJSON examples of ADaM data
-- The **examples/sdtm** folder contains Dataset-JSON JSON and NDJSON examples of SDTM data
-- The **examples/send** folder contains Dataset-JSON JSON and NDJSON examples of SEND data
+- The **examples/adam** folder contains Dataset-JSON JSON, NDJSON, and DSJC examples of ADaM data
+- The **examples/sdtm** folder contains Dataset-JSON JSON, NDJSON, and DSJC examples of SDTM data
+- The **examples/send** folder contains Dataset-JSON JSON, NDJSON, and DSJC examples of SEND data
 
 - The **examples/big_xpt** folder contains scripts to create a large XPT file (5Gb) from the XPT file **examples/sdtm/lb.xpt**.
 - The **examples/extensions** folder contains an example of extending the Dataset-JSON schema: **examples/extensions/extension.yaml**.
