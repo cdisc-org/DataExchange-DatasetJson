@@ -35,11 +35,6 @@
             <tr>
               <td>2025-06-19</td>
               <td>1.1</td>
-              <td>Final</td>
-            </tr>
-            <tr>
-              <td>2025-03-18</td>
-              <td>1.1</td>
               <td>Draft</td>
             </tr>
           </tbody>
