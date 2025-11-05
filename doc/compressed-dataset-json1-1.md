@@ -61,6 +61,7 @@
 - [Benefits](#benefits)
 - [Limitations](#limitations)
 - [Conformance](#conformance)
+- [Glossary and Abbreviations](#glossaryandabbreviations)
 
 ## <a id="introduction"></a>Introduction
 
@@ -184,3 +185,57 @@ A conforming implementation must:
 2. Successfully decompress DSJC files and interpret the content as Dataset-NDJSON
 3. Handle errors gracefully as specified in section [Error Handling](#errorhandling).
 4. Preserve all semantic information from the original Dataset-JSON content
+
+
+## <a id="glossaryandabbreviations"></a>Glossary and Abbreviations
+
+<table title="Glossary and Abbreviations">
+  <tbody>
+    <tr>
+      <th scope="col">Term</th>
+      <th scope="col">Stands for, plus Reference to CDISC Standard or source of information</th>
+    </tr>
+    <tr>
+      <td>CPU</td>
+      <td>
+        Central processing unit. The primary processor in a given computer.
+      </td>
+    </tr>
+    <tr>
+      <td>DSJC</td>
+      <td>
+        Dataset-JSON Compressed
+      </td>
+    </tr>
+    <tr>
+      <td>JSON</td>
+      <td>
+        JavaScript Object Notation
+      </td>
+    </tr>
+    <tr>
+      <td>MIME</td>
+      <td>
+        Multipurpose Internet Mail Extensions. Two-part identifier for file formats and content formats, that defines how different types of data, such as text, images, or other binary files, can be formatted and sent over the internet.
+      </td>
+    </tr>
+    <tr>
+      <td>NDJSON</td>
+      <td>
+        Newline delimited JSON
+      </td>
+    </tr>
+    <tr>
+      <td>UTF-8</td>
+      <td>
+        Unicode Transformation Format 8-bit. A character encoding standard used for electronic communication.
+      </td>
+    </tr>
+    <tr>
+      <td>zLib</td>
+      <td>
+        Software library used for data compression as well as a data format
+      </td>
+    </tr>
+  </tbody>
+</table>
