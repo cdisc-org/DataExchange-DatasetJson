@@ -216,7 +216,7 @@ A conforming implementation must:
     <tr>
       <td>MIME</td>
       <td>
-        Multipurpose Internet Mail Extensions. two-part identifier for file formats and content formats, that defines how different types of data, such as text, images, or other binary files, can be formatted and sent over the internet.
+        Multipurpose Internet Mail Extensions. Two-part identifier for file formats and content formats, that defines how different types of data, such as text, images, or other binary files, can be formatted and sent over the internet.
       </td>
     </tr>
     <tr>
@@ -234,7 +234,7 @@ A conforming implementation must:
     <tr>
       <td>zLib</td>
       <td>
-        Software library used for data compression as well as a data format.
+        Software library used for data compression as well as a data format
       </td>
     </tr>
   </tbody>
