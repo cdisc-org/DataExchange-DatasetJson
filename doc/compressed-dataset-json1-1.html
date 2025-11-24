@@ -176,9 +176,9 @@
   <p>The Dataset-NDJSON format serves as the base format for DSJC as it
   provides better streaming capabilities. It consists of:</p>
   <ol>
-    <li><strong>First Line</strong>: A JSON object containing Dataset-JSON
+    <li><strong>First line</strong>: A JSON object containing Dataset-JSON
     metadata (without the rows property)</li>
-    <li><strong>Subsequent Lines</strong>: Each line is a valid JSON array or
+    <li><strong>Subsequent lines</strong>: Each line is a valid JSON array or
     object representing a single data record</li>
   </ol>
   <p>Usage of whitespace characters should be reduced to a minimum required by
@@ -201,12 +201,12 @@
   <p>DSJC applies standard zLib compression to the entire Dataset-NDJSON
   content:</p>
   <ol>
-    <li><strong>Compression Algorithm</strong>: zLib (DEFLATE)</li>
-    <li><strong>Compression Level</strong>: Implementers may choose an
+    <li><strong>Compression algorithm</strong>: zLib (DEFLATE)</li>
+    <li><strong>Compression level</strong>: Implementers may choose an
     appropriate compression level, with 9 (maximum compression) recommended for
     storage-optimized scenarios and lower levels for performance-sensitive
     applications</li>
-    <li><strong>Window Size</strong>: 15 bits (32 KB window) is
+    <li><strong>Window size</strong>: 15 bits (32 KB window) is
     recommended</li>
     <li><strong>Strategy</strong>: Default compression strategy is
     recommended</li>
@@ -303,13 +303,13 @@
 
   <p>The DSJC format offers several benefits:</p>
   <ol>
-    <li>Reduced Size: Significant reduction in file size compared to
+    <li>Reduced size: Significant reduction in file size compared to
     uncompressed Dataset-JSON</li>
-    <li>Simplified Implementation: Leverages widely available zLib libraries,
+    <li>Simplified implementation: Leverages widely available zLib libraries,
     available in SAS, R, Python, and other languages</li>
-    <li>Streaming Support: Enables record-by-record processing without
+    <li>Streaming support: Enables record-by-record processing without
     decompressing or loading the entire dataset</li>
-    <li>Platform Independence: Works consistently across different operating
+    <li>Platform independence: Works consistently across different operating
     systems and programming languages</li>
   </ol>
 
@@ -317,9 +317,9 @@
 
   <p>Implementers should be aware of the following limitations:</p>
   <ol>
-    <li>Processing Overhead: Compression and decompression require additional
+    <li>Processing overhead: Compression and decompression require additional
     CPU resources</li>
-    <li>Random Access: DSJC doesn't provide direct random access to specific
+    <li>Random access: DSJC doesn't provide direct random access to specific
     records without decompressing the preceding content</li>
   </ol>
 

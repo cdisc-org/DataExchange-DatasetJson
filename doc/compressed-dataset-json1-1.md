@@ -75,8 +75,8 @@ DSJC is defined as a direct zLib compression stream of Dataset-NDJSON format con
 
 The Dataset-NDJSON format serves as the base format for DSJC as it provides better streaming capabilities. It consists of:
 
-1. **First Line**: A JSON object containing Dataset-JSON metadata (without the rows property)
-2. **Subsequent Lines**: Each line is a valid JSON array or object representing a single data record
+1. **First line**: A JSON object containing Dataset-JSON metadata (without the rows property)
+2. **Subsequent lines**: Each line is a valid JSON array or object representing a single data record
 
 Usage of whitespace characters should be reduced to a minimum required by the Dataset-NDJSON format. Avoid spaces between JSON array elements or attribute definitions.
 
@@ -93,9 +93,9 @@ Example of Dataset-NDJSON before compression:
 
 DSJC applies standard zLib compression to the entire Dataset-NDJSON content:
 
-1. **Compression Algorithm**: zLib (DEFLATE)
-2. **Compression Level**: Implementers may choose an appropriate compression level, with 9 (maximum compression) recommended for storage-optimized scenarios and lower levels for performance-sensitive applications
-3. **Window Size**: 15 bits (32 KB window) is recommended
+1. **Compression algorithm**: zLib (DEFLATE)
+2. **Compression level**: Implementers may choose an appropriate compression level, with 9 (maximum compression) recommended for storage-optimized scenarios and lower levels for performance-sensitive applications
+3. **Window size**: 15 bits (32 KB window) is recommended
 4. **Strategy**: Default compression strategy is recommended
 
 ## <a id="fileformat"></a>File Format
@@ -165,17 +165,17 @@ To ensure maximum compatibility, implementations should:
 
 The DSJC format offers several benefits:
 
-1. Reduced Size: Significant reduction in file size compared to uncompressed Dataset-JSON
-2. Simplified Implementation: Leverages widely available zLib libraries, available in SAS, R, Python, and other languages
-3. Streaming Support: Enables record-by-record processing without decompressing or loading the entire dataset
-4. Platform Independence: Works consistently across different operating systems and programming languages
+1. Reduced size: Significant reduction in file size compared to uncompressed Dataset-JSON
+2. Simplified implementation: Leverages widely available zLib libraries, available in SAS, R, Python, and other languages
+3. Streaming support: Enables record-by-record processing without decompressing or loading the entire dataset
+4. Platform independence: Works consistently across different operating systems and programming languages
 
 ## <a id="limitations"></a>Limitations
 
 Implementers should be aware of the following limitations:
 
-1. Processing Overhead: Compression and decompression require additional CPU resources
-2. Random Access: DSJC doesn't provide direct random access to specific records without decompressing the preceding content
+1. Processing overhead: Compression and decompression require additional CPU resources
+2. Random access: DSJC doesn't provide direct random access to specific records without decompressing the preceding content
 
 ## <a id="conformance"></a>Conformance
 
@@ -183,7 +183,7 @@ A conforming implementation must:
 
 1. Correctly compress Dataset-NDJSON content using the zLib compression algorithm
 2. Successfully decompress DSJC files and interpret the content as Dataset-NDJSON
-3. Handle errors gracefully as specified in section [Error Handling](#errorhandling).
+3. Handle errors gracefully as specified in [Error Handling](#errorhandling).
 4. Preserve all semantic information from the original Dataset-JSON content
 
 
