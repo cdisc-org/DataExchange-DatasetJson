@@ -183,7 +183,7 @@ A conforming implementation must:
 
 1. Correctly compress Dataset-NDJSON content using the zLib compression algorithm
 2. Successfully decompress DSJC files and interpret the content as Dataset-NDJSON
-3. Handle errors gracefully as specified in [Error Handling](#errorhandling).
+3. Handle errors gracefully as specified in [Error Handling](#errorhandling)
 4. Preserve all semantic information from the original Dataset-JSON content
 
 
