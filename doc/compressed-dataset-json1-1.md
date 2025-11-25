@@ -186,14 +186,15 @@ A conforming implementation must:
 3. Handle errors gracefully, as specified in [Error Handling](#errorhandling)
 4. Preserve all semantic information from the original Dataset-JSON content
 
-
 ## <a id="glossaryandabbreviations"></a>Glossary and Abbreviations
-
+The following table lists some of the abbreviations and terms used in this document.
 <table title="Glossary and Abbreviations">
   <tbody>
     <tr>
-      <th scope="col">Term</th>
-      <th scope="col">Stands for, plus Reference to CDISC Standard or source of information</th>
+      <td>CDISC</td>
+      <td>
+        Clinical Data Interchange Standards Consortium
+      </td>
     </tr>
     <tr>
       <td>CPU</td>
