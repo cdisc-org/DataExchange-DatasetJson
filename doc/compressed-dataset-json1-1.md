@@ -33,9 +33,9 @@
               <th>Summary of Changes</th>
             </tr>
             <tr>
-              <td>2025-06-19</td>
+              <td>2025-12-11</td>
               <td>1.1</td>
-              <td>Draft</td>
+              <td>Final</td>
             </tr>
           </tbody>
         </table>
