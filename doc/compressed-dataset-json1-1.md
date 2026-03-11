@@ -44,7 +44,6 @@
   </tbody>
 </table>
 
-- [CDISC Compressed Dataset-JSON v1.1 Specification (DSJC)](#cdisc-compressed-dataset-json-v11-specification-dsjc)
 - [Introduction](#introduction)
 - [Format Definition](#formatdefinition)
 - [Base Format: Dataset-NDJSON](#baseformat)
