@@ -69,7 +69,17 @@ The DSJC (Dataset-JSON Compressed) format is a standardized method for compressi
 
 ## <a id="formatdefinition"></a>Format Definition
 
-DSJC is defined as a direct zLib compression stream of Dataset-NDJSON format content without additional headers, signatures, or metadata beyond what the zLib format itself provides.
+DSJC is defined as a zLib compression stream of Dataset-NDJSON format content, prefixed with a simplified GZIP header. This configuration allows to have a compatibility with standard compression libraries and tools.
+
+The header comprises the first 8 bytes of the file, structured as follows:
+
+*   **Identification (Bytes 1-2):** `0x1F 0x8B` (GZIP Magic Number)
+*   **Compression Method (Byte 3):** `0x08` (DEFLATE)
+*   **Padding (Bytes 4-8):** `0x00`
+
+The resulting DSJC file structure is:
+
+`0x1F 0x8B 0x08 0x00 0x00 0x00 0x00 0x00 <zLib compression stream>`
 
 ## <a id="baseformat"></a>Base Format: Dataset-NDJSON
 
